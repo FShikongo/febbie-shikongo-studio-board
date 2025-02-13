@@ -84,7 +84,7 @@ Apply Modal
 ### Mockups
 
 Mockup images located in asset folder > image folder
-* Home Page (/assest/Images/Mockup-Home_Page.png)
+![Home Page](/assest/Images/Mockup-Home_Page.png)
 2. Dashboard - Mockup-Dashboard.png
 3. Job/Event Details - Mockup-Job_Event_Details.png
 4. Apply Modal - Mockup-Apply_Modal.png
