@@ -83,16 +83,18 @@ Apply Modal
 
 ### Mockups
 Home Page
-![Home Page](/assest/Images/Mockup-Home_Page.png)
+![Home Page](/asset/Images/Mockup-Home_Page.png)
 
 Dashboard
-![Dashboard](/assest/Images/Mockup-Dashboard.png)
+![Dashboard](/asset/Images/Mockup-Dashboard.png)
 
 Job/Event Detail
-![Job/Event Details](/assest/Images/Mockup-Job_Event_Details.png)
+![Job/Event Details](/asset/Images/Mockup-Job_Event_Details.png)
 
 Apply Modal
-![Apply Modal](/assest/Images/Mockup-Apply_Modal.png)
+![Apply Modal](/asset/Images/Mockup-Apply_Modal.png)
+
+
 
 
 
