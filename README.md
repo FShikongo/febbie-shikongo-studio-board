@@ -133,13 +133,11 @@ Job Listings
 
 1. GET /jobs
 
-   Parameters: type (string, optional) - location (string, optional)
+   - Parameters: type (string, optional) - location (string, optional)
    
-   Response:
-    - 200 OK (success)
+   - Response: 200 OK (success)
    
-   Example Response:
-    [ { "id": 1, "title": "Film Editor", "company": "Studio A", "location": "Toronto", "description": "Editing various film projects..." } ]
+   - Example Response:[ { "id": 1, "title": "Film Editor", "company": "Studio A", "location": "Toronto", "description": "Editing various film projects..." } ]
 
 3. POST /jobs
    Parameters: - title (string) - description (string) - location (string) - job_type (string) - company_id
