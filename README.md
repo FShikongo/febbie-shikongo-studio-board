@@ -84,12 +84,13 @@ Apply Modal
 ### Mockups
 
 Mockup images located in asset folder > image folder
+Home Page 
 ![Home Page](/assest/Images/Mockup-Home_Page.png)
 2. Dashboard - Mockup-Dashboard.png
 3. Job/Event Details - Mockup-Job_Event_Details.png
 4. Apply Modal - Mockup-Apply_Modal.png
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+
 
 
 ### Data
