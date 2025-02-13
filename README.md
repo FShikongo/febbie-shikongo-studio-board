@@ -1,5 +1,3 @@
-# febbie-shikongo-studio-board
-
 # Studio Board
 
 ## Overview
