@@ -188,43 +188,55 @@ Job Listings
 
 Roadmap: 2-Week MVP Sprint Plan
 
-Week 1: Core Development & Setup
-
-✅ Day 1-2:
+### Setup & Deployment
 - Finalize feature list & tech stack
 - Set up GitHub repository & project structure
+- Create client
+  - Build frontend structure with React & Sass
+  - Initialize React project with routes and boilerplate pages
+- Create server
+  - Set up Express.js project with routing and placeholder 200 responses
+- Create database schema & migrations
+  - Define MySQL database structure
+  - Create tables for users, job listings, applications, and events
+- Seed database
+  - Insert sample job listings, events, and users 
 - Initialize MySQL database & define ERD
 - Set up backend (Express.js, Node.js, MySQL)
-
-✅ Day 3-4:
 - Implement job listing CRUD functionality
-- Build frontend structure with React & Sass
 - Connect frontend to backend API
-
-✅ Day 5-7:
 - Implement job search & filtering
 - Style core pages (home, job board, event board)
 - Test backend endpoints with Postman
 
-Week 2: UI/UX, Testing & Deployment
+### Core Features
 
-✅ Day 8-10: 
+- Feature: List job opportunities & events
+  - Implement job board & event listing pages
+  - Store filters (location, category) in sessionStorage
+  - Create GET /jobs & GET /events endpoints
+- Feature: View job or event details
+  - Implement detailed view page
+  - Create GET /jobs/:id & GET /events/:id endpoints
+
+### Testing & Deployment
+
 - Form validation & error handling
 - Implement authentication on frontend (JWT)
 - Optimize database queries & API performance
 - Refine UI/UX for better user experience
 
-✅ Day 11-12: 
+
 - User testing for functionality & responsiveness
 - Debug & fix critical issues
 - Final refinements & polish UI
-
-✅ Day 13-14: 
+ 
 - Deploy backend (Heroku)
 - Deploy frontend (Netlify)
 - Final testing & bug fixes
 - Prepare capstone presentation materials
 - Submit project
+- DEMO DAY 🚀
 
 ---
 
