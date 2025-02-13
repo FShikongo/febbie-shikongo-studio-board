@@ -88,6 +88,7 @@ Mockup images located in asset folder > image folder
 2. Dashboard - Mockup-Dashboard.png
 3. Job/Event Details - Mockup-Job_Event_Details.png
 4. Apply Modal - Mockup-Apply_Modal.png
+5. assest/Images/Mockup-Apply_Modal.png
 
 ### Data
 
