@@ -133,8 +133,7 @@ Job Listings
 
 1. GET /jobs
 
-   Parameters:
-     - type (string, optional) - location (string, optional)
+   Parameters: type (string, optional) - location (string, optional)
    
    Response:
     - 200 OK (success)
