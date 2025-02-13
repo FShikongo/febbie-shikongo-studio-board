@@ -83,9 +83,9 @@ Apply Modal
 
 ### Mockups
 ![Home Page](/assest/Images/Mockup-Home_Page.png)
-2. Dashboard  /asseMockup-Dashboard.png
-3. Job/Event Details - Mockup-Job_Event_Details.png
-4. Apply Modal - Mockup-Apply_Modal.png
+![Dashboard](/assest/Images/Mockup-Dashboard.png)
+![Job/Event Details](/assest/Images/Mockup-Job_Event_Details.png)
+![Apply Modal](/assest/Images/Mockup-Apply_Modal.png)
 
 
 
