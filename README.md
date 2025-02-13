@@ -133,7 +133,9 @@ Job Listings
 
 1. GET /jobs
 
-   - Parameters: type (string, optional) - location (string, optional)
+   - Parameters:
+     - type (string, optional)
+     - location (string, optional)
    
    - Response: 200 OK (success)
    
@@ -153,16 +155,34 @@ Job Listings
    - Example Response: { "message": "Job posted successfully", "job_id": 1 }
 
 5. GET /jobs/:id
-   Parameters: - id (int, job id)
-   Response: - 200 OK (success) - Example Response: { "id": 1, "title": "Film Editor", "description": "Editing various film projects..." }
 
-6. PUT /jobs/:id
-   Parameters: - title (string, optional) - description (string, optional) - location (string, optional)
-   Response: - 200 OK (success) - Example Response: { "message": "Job updated successfully" }
+   - Parameters:
+     - id (int, job id)
+   
+   - Response: 200 OK (success)
+   - 
+   - Example Response: { "id": 1, "title": "Film Editor", "description": "Editing various film projects..." }
 
-7. DELETE /jobs/:id
-   Parameters: - id (int, job id)
-   Response: - 200 OK (success) - Example Response: { "message": "Job deleted successfully" }
+7. PUT /jobs/:id
+
+   - Parameters:
+     - title (string, optional)
+     - description (string, optional)
+     - location (string, optional)
+
+   - Response: 200 OK (success)
+
+   - Example Response: { "message": "Job updated successfully" }
+
+9. DELETE /jobs/:id
+    
+   - Parameters:
+     - id (int, job id)
+   
+   - Response: 200 OK (success)
+     
+   - Example Response: { "message": "Job deleted successfully" }
+
 
 ## Roadmap
 
