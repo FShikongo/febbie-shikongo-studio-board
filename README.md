@@ -11,9 +11,7 @@ The media and production industry can be difficult to break into, with many oppo
 
 ### User Profile
 
-Studio Board will be used by filmmakers, actors, crew members, content creators, media professionals, entertainment agencies, and marketing/advertising firms looking to hire talent or find industry opportunities. Employers, production companies, and event organizers can use the platform to post job openings, volunteer opportunities, and networking events.
-
-Special considerations include ensuring an intuitive user experience for both job seekers and recruiters, implementing a filtering system for relevant opportunities, and maintaining a verification process to prevent spam or fake listings. The platform should also support media uploads for portfolios and résumés to showcase user experience.
+Studio Board will be used by filmmakers, actors, crew members, content creators, media professionals, entertainment agencies, and marketing/advertising firms looking to hire talent or find industry opportunities. Employers, production companies, and event organizers can use the platform to post job openings, volunteer opportunities, and networking events. Special considerations include ensuring an intuitive user experience for both job seekers and recruiters, implementing a filtering system for relevant opportunities, and maintaining a verification process to prevent spam or fake listings. The platform should also support media uploads for portfolios and résumés to showcase user experience.
 
 ### Features
 
@@ -45,12 +43,11 @@ Hosting & Deployment:
 
 Potential Limitations & Considerations:
 
-1. Free-tier Hosting Limits - Some hosting platforms have request limits, so scaling may require a paid plan.
-2. Authentication Complexity - JWT auth is lightweight, but additional security measures like OAuth (Google Login) may be needed later.
+- Free-tier Hosting Limits - Some hosting platforms have request limits, so scaling may require a paid plan.
+- Authentication Complexity - JWT auth is lightweight, but additional security measures like OAuth (Google Login) may be needed later.
 
 ### APIs
-
-1. Google Maps API - To display job locations and event venues on an interactive map.
+* Google Maps API - To display job locations and event venues on an interactive map.
 
 ### Sitemap
 
@@ -158,34 +155,46 @@ Job Listings
 Roadmap: 2-Week MVP Sprint Plan
 
 Week 1: Core Development & Setup
+
 ✅ Day 1-2:
-Finalize feature list & tech stack
-Set up GitHub repository & project structure
-Initialize MySQL database & define ERD
-Set up backend (Express.js, Node.js, MySQL)
+- Finalize feature list & tech stack
+- Set up GitHub repository & project structure
+- Initialize MySQL database & define ERD
+- Set up backend (Express.js, Node.js, MySQL)
 
 ✅ Day 3-4:
-Implement job listing CRUD functionality
-Build frontend structure with React & Sass
-Connect frontend to backend API
+- Implement job listing CRUD functionality
+- Build frontend structure with React & Sass
+- Connect frontend to backend API
 
 ✅ Day 5-7:
-Implement job search & filtering
-Style core pages (home, job board, event board)
-Test backend endpoints with Postman
+- Implement job search & filtering
+- Style core pages (home, job board, event board)
+- Test backend endpoints with Postman
 
 Week 2: UI/UX, Testing & Deployment
-✅ Day 8-10: - Form validation & error handling - Implement authentication on frontend (JWT) - Optimize database queries & API performance - Refine UI/UX for better user experience
 
-✅ Day 11-12: - User testing for functionality & responsiveness - Debug & fix critical issues - Final refinements & polish UI
+✅ Day 8-10: 
+- Form validation & error handling
+- Implement authentication on frontend (JWT)
+- Optimize database queries & API performance
+- Refine UI/UX for better user experience
 
-✅ Day 13-14: - Deploy backend (Heroku) - Deploy frontend (Netlify) - Final testing & bug fixes - Prepare capstone presentation materials - Submit project
+✅ Day 11-12: 
+- User testing for functionality & responsiveness
+- Debug & fix critical issues
+- Final refinements & polish UI
+
+✅ Day 13-14: 
+- Deploy backend (Heroku)
+- Deploy frontend (Netlify)
+- Final testing & bug fixes
+- Prepare capstone presentation materials
+- Submit project
 
 ---
 
 ## Future Implementations
-
-Your project will be marked based on what you committed to in the above document. Here, you can list any additional features you may complete after the MVP of your application is built, or if you have extra time before the Capstone due date.
 
 Future Implementations
 
