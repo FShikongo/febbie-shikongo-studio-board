@@ -197,7 +197,7 @@ Week 2: UI/UX, Testing & Deployment
 
 ## Future Implementations
 
-Future Implementations
+### Nice-to-haves
 
 1. Events Page - Lists networking events, film festivals, and industry meetups. Implement event listing CRUD functionality
 2. Post a Job Page - Employers submit job listings (can be a form modal on the Jobs Page).
