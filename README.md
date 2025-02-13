@@ -82,12 +82,16 @@ Apply Modal
 3. Modal - title, message, button (apply, cancel), exit icon
 
 ### Mockups
+Home Page
 ![Home Page](/assest/Images/Mockup-Home_Page.png)
 
+Dashboard
 ![Dashboard](/assest/Images/Mockup-Dashboard.png)
 
+Job/Event Detail
 ![Job/Event Details](/assest/Images/Mockup-Job_Event_Details.png)
 
+Apply Modal
 ![Apply Modal](/assest/Images/Mockup-Apply_Modal.png)
 
 
