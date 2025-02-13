@@ -84,7 +84,7 @@ Apply Modal
 ### Mockups
 
 Mockup images located in asset folder > image folder
-1. Home Page (https://github.com/FShikongo/febbie-shikongo-studio-board/blob/8c5580bb3f64fd24fc94fb6030bdb98de59739eb/assest/Images/Mockup-Home_Page.png)
+1. Home Page /assest/Images/Mockup-Home_Page.png
 2. Dashboard - Mockup-Dashboard.png
 3. Job/Event Details - Mockup-Job_Event_Details.png
 4. Apply Modal - Mockup-Apply_Modal.png
