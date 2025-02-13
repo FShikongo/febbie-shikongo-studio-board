@@ -140,18 +140,27 @@ Job Listings
    - Example Response:[ { "id": 1, "title": "Film Editor", "company": "Studio A", "location": "Toronto", "description": "Editing various film projects..." } ]
 
 3. POST /jobs
-   Parameters: - title (string) - description (string) - location (string) - job_type (string) - company_id
-   Response: - 201 Created (success) - Example Response: { "message": "Job posted successfully", "job_id": 1 }
 
-4. GET /jobs/:id
+   - Parameters:
+     - title (string)
+     - description (string)
+     - location (string)
+     - job_type (string)
+     - company_id
+
+   - Response: 201 Created (success)
+
+   - Example Response: { "message": "Job posted successfully", "job_id": 1 }
+
+5. GET /jobs/:id
    Parameters: - id (int, job id)
    Response: - 200 OK (success) - Example Response: { "id": 1, "title": "Film Editor", "description": "Editing various film projects..." }
 
-5. PUT /jobs/:id
+6. PUT /jobs/:id
    Parameters: - title (string, optional) - description (string, optional) - location (string, optional)
    Response: - 200 OK (success) - Example Response: { "message": "Job updated successfully" }
 
-6. DELETE /jobs/:id
+7. DELETE /jobs/:id
    Parameters: - id (int, job id)
    Response: - 200 OK (success) - Example Response: { "message": "Job deleted successfully" }
 
