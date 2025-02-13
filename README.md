@@ -82,11 +82,8 @@ Apply Modal
 3. Modal - title, message, button (apply, cancel), exit icon
 
 ### Mockups
-
-Mockup images located in asset folder > image folder
-Home Page 
 ![Home Page](/assest/Images/Mockup-Home_Page.png)
-2. Dashboard - Mockup-Dashboard.png
+2. Dashboard  /asseMockup-Dashboard.png
 3. Job/Event Details - Mockup-Job_Event_Details.png
 4. Apply Modal - Mockup-Apply_Modal.png
 
