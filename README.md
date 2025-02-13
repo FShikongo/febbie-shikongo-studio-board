@@ -81,13 +81,13 @@ Apply Modal
 ### Mockups
 
 #### Home Page
-![Home Page](/asset/Images/Mockup-Home_Page.png)
+![](/asset/Images/Mockup-Home_Page.png)
 
 #### Dashboard Page
-![Dashboard](/asset/Images/Mockup-Dashboard.png)
+![](/asset/Images/Mockup-Dashboard.png)
 
 #### Job Event Details Page
-![Job/Event Details](/asset/Images/Mockup-Job_Event_Details.png)
+![](/asset/Images/Mockup-Job_Event_Details.png)
 
 #### Apply Modal
 ![](/asset/Images/Mockup-Apply_Modal.png)
