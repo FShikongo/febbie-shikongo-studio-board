@@ -1,0 +1,1 @@
+import "./JobEventList.scss";
