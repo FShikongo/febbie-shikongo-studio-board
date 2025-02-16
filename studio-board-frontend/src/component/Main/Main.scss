@@ -1,0 +1,107 @@
+.main {
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: url("your-hero-background-image-url-here") no-repeat center
+    center/cover;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.hero__cta-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.features__title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.features__card {
+  width: 30%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features__card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.features__card-title {
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.features__card-text {
+  padding: 15px;
+}
+
+.features__card-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Partner Showcase Section */
+.partner-showcase {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.partner-showcase__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.partner-showcase__logos {
+  display: flex;
+  overflow-x: auto;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.partner-showcase__logo {
+  width: 150px;
+  height: auto;
+  flex-shrink: 0;
+}
