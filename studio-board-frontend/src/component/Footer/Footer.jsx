@@ -5,11 +5,7 @@ export default function footer() {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__logo">
-          <img
-            className="footer__logo-img"
-            src="your-logo-url-here"
-            alt="Studio Board"
-          />
+          <Logo />
         </div>
 
         <section className="footer__subscribe">

@@ -1,6 +1,8 @@
 import "./Header.scss";
+import Logo from "../Logo/Logo";
+import { NavLink } from "react-router-dom";
 
-export default function header() {
+export default function Header() {
   return (
     <>
       <header className="header">
@@ -8,6 +10,7 @@ export default function header() {
           <div className="header__home">
             <Logo />
           </div>
+
           <ul className="header__nav">
             <li className="header__block">
               <NavLink
@@ -18,19 +21,31 @@ export default function header() {
                     : "header__link"
                 }
               >
-                Warehouses
+                Job Board
               </NavLink>
             </li>
             <li className="header__block">
               <NavLink
-                to="/inventory"
+                to="/event"
                 className={({ isActive }) =>
                   isActive
                     ? "header__link header__link--active"
                     : "header__link"
                 }
               >
-                Inventory
+                Event
+              </NavLink>
+            </li>
+            <li className="header__block">
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive
+                    ? "header__link header__link--active"
+                    : "header__link"
+                }
+              >
+                Login
               </NavLink>
             </li>
           </ul>
