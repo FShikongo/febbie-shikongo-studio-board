@@ -1,0 +1,11 @@
+import "./Logo.scss";
+import logo from "../../assets/logo/InStock-Logo.svg";
+import { Link } from "react-router-dom";
+
+export default function Logo() {
+  return (
+    <Link to="/">
+      <img src={logo} className="logo" alt="InStock Logo" />
+    </Link>
+  );
+}
