@@ -12,7 +12,7 @@ export default function Header() {
           </div>
 
           <ul className="header__nav">
-            <li className="header__block">
+            <li className="header__label">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
@@ -24,7 +24,7 @@ export default function Header() {
                 Job Board
               </NavLink>
             </li>
-            <li className="header__block">
+            <li className="header__label">
               <NavLink
                 to="/event"
                 className={({ isActive }) =>
@@ -36,7 +36,7 @@ export default function Header() {
                 Event
               </NavLink>
             </li>
-            <li className="header__block">
+            <li className="header__label">
               <NavLink
                 to="/login"
                 className={({ isActive }) =>
