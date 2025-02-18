@@ -19,7 +19,6 @@ export default function Main() {
         <section className="features">
           <h2 className="features__title">Featured Opportunities</h2>
           <div className="features__list">
-            {/* Job Opportunity 1 */}
             <div className="features__card">
               <div
                 className="features__card-image"
@@ -82,65 +81,109 @@ export default function Main() {
           <div className="partner-showcase__logos">
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 1"
+              src="../../assets/Logo/Berlin-International-Art-FF.jpeg"
+              alt="Berlin International Art Film Festival"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 2"
+              src="../../assets/Logo/Atlanta-FF.png"
+              alt="Atlanta Film Festival"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 3"
+              src="../../assets/Logo/Netflix-logo.png"
+              alt="Netflix"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 4"
+              src="../../assets/Logo/Niagara-Canada-International-FF.png"
+              alt="Niagara Canada International Film Festival"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 5"
+              src="../../assets/Logo/cinema-production-logo.jpg"
+              alt="Cinema Production"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 6"
+              src="../../assets/Logo/Whistler_film_festivals_logo.png"
+              alt="Whistler Film Festials"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 7"
+              src="../../assets/Logo/Warner-Bros-logo.png"
+              alt="Warner Brothers"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 8"
+              src="../../assets/Logo/FF-Alliance.png"
+              alt="Film Festival Allaince"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 9"
+              src="../../assets/Logo/sony-pictures-logo.png"
+              alt="Sony Pictures"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 10"
+              src="../../assets/Logo/Sidewalk-FF-logo.png"
+              alt="Sidewalk Film Festival"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 11"
+              src="../../assets/Logo/Disney+.png"
+              alt="Disney Plus"
             />
             <img
               className="partner-showcase__logo"
-              src="your-partner-logo-url-here"
-              alt="Partner 12"
+              src="../../assets/Logo/Paramount-Pictures-logo.png"
+              alt="Paramount Pictures"
             />
-            {/* Add more logos as needed */}
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/tiff-logo.png"
+              alt="Toronto Film Festival"
+            />
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/NashFilmRegLogo.jpg"
+              alt="Nashville Film Festival"
+            />
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/oprah-winfrey-network-logo.jp"
+              alt="Oprah Winfrey Network"
+            />
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/LA-International-FF-logo.png"
+              alt="LA International Film Festival"
+            />
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/sundance-film-festival-logo.jpg"
+              alt="Sundance Film Festival"
+            />
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/Tyler-Perry-Studios.jpg"
+              alt="Tyler Perry Studios"
+            />
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/Niagara-Canada-International-FF.png"
+              alt="Niagara Canada International Film Festival"
+            />
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/Niagara-Canada-International-FF.png"
+              alt="Niagara Canada International Film Festival"
+            />
+            <img
+              className="partner-showcase__logo"
+              src="../../assets/Logo/Niagara-Canada-International-FF.png"
+              alt="Niagara Canada International Film Festival"
+            />
           </div>
         </section>
       </main>
