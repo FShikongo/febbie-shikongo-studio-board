@@ -58,7 +58,7 @@
 }
 
 @mixin button-primary {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.3;
@@ -66,14 +66,14 @@
   width: auto;
   padding: 0 16px;
   border-radius: 20px;
-  border: 2px solid $instock-indigo;
+  border: 2px solid $studio-blue;
   color: $white;
-  background-color: $instock-indigo;
+  background-color: $studio-blue;
 
   &:hover {
-    border-color: $instock-black;
+    border-color: $studio-black;
     color: $white;
-    background-color: $instock-black;
+    background-color: $studio-black;
   }
 
   @include tablet {
@@ -82,7 +82,7 @@
 }
 
 @mixin button-secondary {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.3;
@@ -95,8 +95,8 @@
   background-color: $white;
 
   &:hover {
-    border-color: $instock-indigo;
-    color: $instock-indigo;
+    border-color: $studio-blue;
+    color: $studio-blue;
     background-color: $white;
   }
 
@@ -106,7 +106,7 @@
 }
 
 @mixin button-delete {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.3;
@@ -119,9 +119,9 @@
   background-color: $red;
 
   &:hover {
-    border-color: $instock-black;
+    border-color: $studio-black;
     color: $white;
-    background-color: $instock-black;
+    background-color: $studio-black;
   }
 
   @include tablet {
@@ -163,7 +163,7 @@
 }
 
 @mixin body--small {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-weight: 400;
   font-size: 0.688rem;
   line-height: 1.3;
