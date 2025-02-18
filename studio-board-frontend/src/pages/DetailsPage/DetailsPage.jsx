@@ -1,5 +1,5 @@
 import "./DetailsPage.scss";
-import Details from "../../component/Details/Details";
+import DetailsCard from "../../component/DetailsCard/DetailsCard";
 
 export default function DetailsPage() {
   return (

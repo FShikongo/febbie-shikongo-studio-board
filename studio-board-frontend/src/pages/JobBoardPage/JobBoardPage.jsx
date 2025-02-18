@@ -1,9 +1,10 @@
-import "./DashBoardPage.scss";
+import "./JobBoardPage.scss";
+import DetailsCard from "../../component/DetailsCard/DetailsCard";
 
-export default function DashBoard() {
+export default function JobBoard() {
   return (
     <>
-      <DashBoard />
+      <DetailsCard />
     </>
   );
 }
