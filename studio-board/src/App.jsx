@@ -4,8 +4,7 @@ import "./App.scss";
 import HomePage from "./pages/HomePage/HomePage";
 import DashBoardPage from "./pages/DashBoardPage/DashBoardPage";
 import DetailsPage from "./pages/DetailsPage/DetailsPage";
-import AddJobEventItem from "./component/AddJobEventItem/AddJobEventItem";
-import EditJobEventItem from "./component/EditJobEventItem/EditJobEventItem";
+import SaveJobEventItem from "./component/SaveJobEventItem/SaveJobEventItem";
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
 
@@ -14,14 +13,13 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<DashBoardPage />} />
           <Route path="/dashboard/:id" element={<DetailsPage />} />
-          <Route path="/dashboard/add" element={<AddJobEventItem />} />
-          <Route path="/dashboard/:id/edit" element={<EditJobEventItem />} />
+          <Route path="/dashboard/save" element={<SaveJobEventItem />} />
         </Routes>
-        <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );
