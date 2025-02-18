@@ -14,14 +14,14 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/home" element={<HomePage />} />
+        {/* <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<DashBoardPage />} />
           <Route path="/dashboard/:id" element={<DetailsPage />} />
           <Route path="/dashboard/add" element={<AddJobEventItem />} />
           <Route path="/dashboard/:id/edit" element={<EditJobEventItem />} />
         </Routes>
-        <Footer />
+        <Footer /> */}
       </BrowserRouter>
     </>
   );
