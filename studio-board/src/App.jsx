@@ -11,16 +11,16 @@ import Footer from "./component/Footer/Footer";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
+      {/* <BrowserRouter> */}
+      <Header />
+      {/* <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<DashBoardPage />} />
           <Route path="/dashboard/:id" element={<DetailsPage />} />
           <Route path="/dashboard/save" element={<SaveJobEventItem />} />
         </Routes>
-        <Footer />
-      </BrowserRouter>
+        <Footer /> */}
+      {/* </BrowserRouter> */}
     </>
   );
 }
