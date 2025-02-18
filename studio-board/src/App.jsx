@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 
 import HomePage from "./pages/HomePage/HomePage";
-import DashBoardPage from "./pages/DashBoardPage/DashBoardPage";
+import DashBoardPage from "./pages/JobBoardPage/JobBoardPage";
 import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import SaveJobEventItem from "./component/SaveJobEventItem/SaveJobEventItem";
 import Header from "./component/Header/Header";

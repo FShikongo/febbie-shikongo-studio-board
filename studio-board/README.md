@@ -47,7 +47,8 @@ Potential Limitations & Considerations:
 - Authentication Complexity - JWT auth is lightweight, but additional security measures like OAuth (Google Login) may be needed later.
 
 ### APIs
-* Google Maps API - To display job locations and event venues on an interactive map.
+
+- Google Maps API - To display job locations and event venues on an interactive map.
 
 ### Sitemap
 
@@ -81,21 +82,20 @@ Apply Modal
 ### Mockups
 
 #### Home Page
-![](/asset/Images/Mockup-Home_Page.png)
+
+![](/src/asset/Images/Mockup-Home_Page.png)
 
 #### Dashboard Page
-![](/asset/Images/Mockup-Dashboard.png)
+
+![](/src/asset/Images/Mockup-Dashboard.png)
 
 #### Job Event Details Page
-![](/asset/Images/Mockup-Job_Event_Details.png)
+
+![](/scr/asset/Images/Mockup-Job_Event_Details.png)
 
 #### Apply Modal
-![](/asset/Images/Mockup-Apply_Modal.png)
 
-
-
-
-
+![](/scr/asset/Images/Mockup-Apply_Modal.png)
 
 ### Data
 
@@ -134,16 +134,18 @@ Job Listings
 1. GET /jobs
 
    - Parameters:
+
      - type (string, optional)
      - location (string, optional)
-   
+
    - Response: 200 OK (success)
-   
+
    - Example Response:[ { "id": 1, "title": "Film Editor", "company": "Studio A", "location": "Toronto", "description": "Editing various film projects..." } ]
 
 2. POST /jobs
 
    - Parameters:
+
      - title (string)
      - description (string)
      - location (string)
@@ -157,15 +159,16 @@ Job Listings
 3. GET /jobs/:id
 
    - Parameters:
+
      - id (int, job id)
-   
+
    - Response: 200 OK (success)
-     
    - Example Response: { "id": 1, "title": "Film Editor", "description": "Editing various film projects..." }
 
 4. PUT /jobs/:id
 
    - Parameters:
+
      - title (string, optional)
      - description (string, optional)
      - location (string, optional)
@@ -175,20 +178,20 @@ Job Listings
    - Example Response: { "message": "Job updated successfully" }
 
 5. DELETE /jobs/:id
-    
-   - Parameters:
-     - id (int, job id)
-   
-   - Response: 200 OK (success)
-     
-   - Example Response: { "message": "Job deleted successfully" }
 
+   - Parameters:
+
+     - id (int, job id)
+
+   - Response: 200 OK (success)
+   - Example Response: { "message": "Job deleted successfully" }
 
 ## Roadmap
 
 Roadmap: 2-Week MVP Sprint Plan
 
 ### Setup & Deployment
+
 - Finalize feature list & tech stack
 - Set up GitHub repository & project structure
 - Create client
@@ -200,7 +203,7 @@ Roadmap: 2-Week MVP Sprint Plan
   - Define MySQL database structure
   - Create tables for users, job listings, applications, and events
 - Seed database
-  - Insert sample job listings, events, and users 
+  - Insert sample job listings, events, and users
 - Initialize MySQL database & define ERD
 - Set up backend (Express.js, Node.js, MySQL)
 - Implement job listing CRUD functionality
@@ -226,11 +229,10 @@ Roadmap: 2-Week MVP Sprint Plan
 - Optimize database queries & API performance
 - Refine UI/UX for better user experience
 
-
 - User testing for functionality & responsiveness
 - Debug & fix critical issues
 - Final refinements & polish UI
- 
+
 - Deploy backend (Heroku)
 - Deploy frontend (Netlify)
 - Final testing & bug fixes
