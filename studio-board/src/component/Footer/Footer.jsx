@@ -78,7 +78,8 @@ export default function footer() {
 
         <section className="footer__copy">
           <p className="footer__copy">
-            &copy; Studio Board Inc. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Studio Board Inc. All Rights
+            Reserved.
           </p>
         </section>
       </div>
