@@ -21,6 +21,12 @@ import laiff from "../../assets/Logo/LA-International-FF-logo.png";
 import sff from "../../assets/Logo/sundance-film-festival-logo.jpg";
 import tps from "../../assets/Logo/Tyler-Perry-Studios.jpg";
 
+const feature = [
+  { id: "feature1", img: "src/assets/bts.gif" },
+  { id: "feature2", img: "src/assets/hair-makeup.gif" },
+  { id: "feature3", img: "src/assets/feastival-de-cannes.gif" },
+];
+
 const heroVideos = [
   { id: "video1", video: "../../assets/Videos/Andrew-Garfield.gif" },
   { id: "video2", video: "../../assets/Videos/Dancing.gif" },
@@ -78,8 +84,9 @@ export default function Main() {
         <h2 className="features__title">Featured Opportunities</h2>
         <div className="features__list">
           <div className="features__card">
-            <div className="features__card-image">
-              <h3 className="features__card-title">Job Opportunity 1</h3>
+            <div key={feature.id} className="features__card-image">
+              <img src={feature.img} alt={feature.id} className="feature-gif" />
+              <h3 className="features__card-title">Crew Call Short Film</h3>
             </div>
             <div className="features__card-text">
               <p className="features__card-description">
@@ -90,18 +97,21 @@ export default function Main() {
           </div>
 
           <div className="features__card">
-            <div className="features__card-image">
-              <h3 className="features__card-title">Job Opportunity 2</h3>
+            <div key={feature.id} className="features__card-image">
+              <img src={feature.img} alt={feature.id} className="feature-gif" />
+              <h3 className="features__card-title">Hair and Makeup</h3>
             </div>
             <div className="features__card-text">
               <p className="features__card-description">
-                Explore opportunities with top production companies.
+                Designs and styles of hair and make-up looks for all the
+                characters.
               </p>
             </div>
           </div>
 
           <div className="features__card">
-            <div className="features__card-image">
+            <div key={feature.id} className="features__card-image">
+              <img src={feature.img} alt={feature.id} className="feature-gif" />
               <h3 className="features__card-title">Film Festival</h3>
             </div>
             <div className="features__card-text">
@@ -117,7 +127,7 @@ export default function Main() {
       <section className="partner-showcase">
         <h2 className="partner-showcase__title">Our Partners</h2>
         <p className="partner-showcase__text">
-          Studio Board is honored to collaborate with some of the world’s most
+          Studio Board is honored to collaborate with some of the world's most
           renowned media companies and festivals, helping to create valuable job
           opportunities and foster meaningful networking experiences.
         </p>

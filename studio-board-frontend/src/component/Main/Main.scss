@@ -83,7 +83,8 @@
 
 /* Features Section */
 .features {
-  padding: 40px 0;
+  height: 60vh;
+  padding: 4rem 4rem;
   text-align: center;
 }
 
@@ -99,6 +100,7 @@
 }
 
 .features__card {
+  height: 50vh;
   width: 30%;
   border-radius: 8px;
   overflow: hidden;
@@ -125,6 +127,7 @@
 
 .features__card-text {
   padding: 15px;
+  top: 10rem;
 }
 
 .features__card-description {
@@ -134,7 +137,8 @@
 
 /* Partner Showcase Section */
 .partner-showcase {
-  padding: 40px 0;
+  height: 80vh;
+  padding: 4rem 4rem;
   text-align: center;
 }
 
