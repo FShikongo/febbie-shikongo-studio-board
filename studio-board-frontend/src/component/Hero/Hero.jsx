@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.scss";
 
 import garfield from "../../assets/Gif/Andrew-Garfield.gif";
@@ -19,7 +19,7 @@ const heroVideos = [
   { id: "video7", video: maestro },
 ];
 
-const Video = () => {
+export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -29,9 +29,7 @@ const Video = () => {
 
     return () => clearInterval(interval);
   }, []);
-};
 
-export default function Hero() {
   return (
     <section className="hero">
       <div className="hero__background">
@@ -39,7 +37,7 @@ export default function Hero() {
           <video
             key={gif.id}
             id={gif.id}
-            src={gif.video}
+            src={gif.video} // Fix: Access video correctly
             className={`hero__video ${index === currentIndex ? "active" : ""}`}
             autoPlay
             loop

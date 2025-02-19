@@ -15,7 +15,6 @@ const feature = [
 export default function Features() {
   return (
     <main className="main">
-      <Hero />
       <section className="features">
         <h2 className="features__title">Featured Opportunities</h2>
         <div className="features__list">
