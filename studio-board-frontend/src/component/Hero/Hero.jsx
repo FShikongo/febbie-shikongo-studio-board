@@ -20,6 +20,7 @@ const heroVideos = [
 ];
 
 export default function Hero() {
+  // ✅ Declare `currentIndex` in the `Hero` component
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function Hero() {
           <video
             key={gif.id}
             id={gif.id}
-            src={gif.video} // Fix: Access video correctly
+            src={gif.video}
             className={`hero__video ${index === currentIndex ? "active" : ""}`}
             autoPlay
             loop
