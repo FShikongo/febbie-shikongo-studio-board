@@ -1,10 +1,10 @@
 import "./JobBoardPage.scss";
-import DetailsCard from "../../component/DetailsCard/DetailsCard";
+// import DetailsCard from "../../component/DetailsCard/DetailsCard";
 
-export default function JobBoard() {
-  return (
-    <>
-      <DetailsCard />
-    </>
-  );
-}
+// export default function JobBoard() {
+//   return (
+//     <>
+//       <DetailsCard />
+//     </>
+//   );
+// }

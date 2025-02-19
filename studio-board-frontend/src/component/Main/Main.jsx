@@ -20,12 +20,7 @@ export default function Main() {
           <h2 className="features__title">Featured Opportunities</h2>
           <div className="features__list">
             <div className="features__card">
-              <div
-                className="features__card-image"
-                style={{
-                  backgroundImage: "url('your-job-image-url-here')",
-                }}
-              >
+              <div className="features__card-image">
                 <h3 className="features__card-title">Job Opportunity 1</h3>
               </div>
               <div className="features__card-text">
@@ -37,12 +32,7 @@ export default function Main() {
             </div>
 
             <div className="features__card">
-              <div
-                className="features__card-image"
-                style={{
-                  backgroundImage: "url('your-job-image-url-here')",
-                }}
-              >
+              <div className="features__card-image">
                 <h3 className="features__card-title">Job Opportunity 2</h3>
               </div>
               <div className="features__card-text">
@@ -53,12 +43,7 @@ export default function Main() {
             </div>
 
             <div className="features__card">
-              <div
-                className="features__card-image"
-                style={{
-                  backgroundImage: "url('your-film-festival-image-url-here')",
-                }}
-              >
+              <div className="features__card-image">
                 <h3 className="features__card-title">Film Festival</h3>
               </div>
               <div className="features__card-text">
@@ -81,7 +66,7 @@ export default function Main() {
           <div className="partner-showcase__logos">
             <img
               className="partner-showcase__logo"
-              src="../../assets/Logo/Berlin-International-Art-FF.jpeg"
+              // src="../../assets/Logo/Berlin-International-Art-FF.jpeg"
               alt="Berlin International Art Film Festival"
             />
             <img
@@ -96,17 +81,17 @@ export default function Main() {
             />
             <img
               className="partner-showcase__logo"
-              src="../../assets/Logo/Niagara-Canada-International-FF.png"
+              // src="../../assets/Logo/Niagara-Canada-International-FF.png"
               alt="Niagara Canada International Film Festival"
             />
             <img
               className="partner-showcase__logo"
-              src="../../assets/Logo/cinema-production-logo.jpg"
+              // src="../../assets/Logo/cinema-production-logo.jpg"
               alt="Cinema Production"
             />
             <img
               className="partner-showcase__logo"
-              src="../../assets/Logo/Whistler_film_festivals_logo.png"
+              // src="../../assets/Logo/Whistler_film_festivals_logo.png"
               alt="Whistler Film Festials"
             />
             <img
@@ -116,12 +101,12 @@ export default function Main() {
             />
             <img
               className="partner-showcase__logo"
-              src="../../assets/Logo/FF-Alliance.png"
+              // src="../../assets/Logo/FF-Alliance.png"
               alt="Film Festival Allaince"
             />
             <img
               className="partner-showcase__logo"
-              src="../../assets/Logo/sony-pictures-logo.png"
+              // src="../../assets/Logo/sony-pictures-logo.png"
               alt="Sony Pictures"
             />
             <img
