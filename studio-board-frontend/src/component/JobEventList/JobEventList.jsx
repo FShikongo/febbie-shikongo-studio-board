@@ -1,7 +1,5 @@
 import "./JobEventList.scss";
 import JobEventCard from "../JobEventList/JobEventList";
-import Modal from "../Modal/Modal";
-import sortIcon from "../../assets/icons/sort-24px.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
