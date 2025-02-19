@@ -1,0 +1,27 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.partner-showcase {
+  height: 80vh;
+  padding: 4rem 4rem;
+  text-align: center;
+}
+
+.partner-showcase__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.partner-showcase__logos {
+  display: flex;
+  overflow-x: auto;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.partner-showcase__logo {
+  width: 150px;
+  height: auto;
+  flex-shrink: 0;
+}

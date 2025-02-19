@@ -1,0 +1,77 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // Dark overlay for better text visibility
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  &__cta-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background: $studio-blue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: $studio-blue;
+    }
+  }
+}
