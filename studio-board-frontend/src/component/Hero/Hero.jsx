@@ -1,13 +1,13 @@
 import React from "react";
 import "./Hero.scss";
 
-import garfield from "../../assets/Videos/Andrew-Garfield.gif";
-import dancing from "../../assets/Videos/Dancing.gif";
-import damme from "../../assets/Videos/JCVDamme.gif";
-import dandbridge from "../../assets/Videos/Dorothy-Dandridge-Vintage.gif";
-import travolta from "../../assets/Videos/Cigarette-Travolta.gif";
-import dancing2 from "../../assets/Videos/Dancing2.gif";
-import maestro from "../../assets/Videos/Maestro.gif";
+import garfield from "../../assets/Gif/Andrew-Garfield.gif";
+import dancing from "../../assets/Gif/Dancing.gif";
+import damme from "../../assets/Gif/JCVDamme.gif";
+import dandbridge from "../../assets/Gif/Dorothy-Dandridge-Vintage.gif";
+import travolta from "../../assets/Gif/Cigarette-Travolta.gif";
+import dancing2 from "../../assets/Gif/Dancing2.gif";
+import maestro from "../../assets/Gif/Maestro.gif";
 
 const heroVideos = [
   { id: "video1", video: garfield },
@@ -19,7 +19,7 @@ const heroVideos = [
   { id: "video7", video: maestro },
 ];
 
-const Hero = () => {
+const Video = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
