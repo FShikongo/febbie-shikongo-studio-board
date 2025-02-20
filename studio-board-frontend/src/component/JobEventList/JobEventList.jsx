@@ -1,51 +1,26 @@
 import "./JobEventList.scss";
-import JobEventCard from "../JobEventList/JobEventList";
+import JobEventCard from "../JobEventCard/JobEventCard";
+import ApplyModal from "../ApplyModal/ApplyModal";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { Link } from "react-router-dom"; //remove
-
-import JobEventCard from "../JobEventCard/JobEventCard";
-import ApplyModal from "../ApplyModal/ApplyModal";
 
 const baseURL = "http://localhost:8080";
 
-const jobData = [
-  {
-    id: 1,
-    organization_name: "Studio Board",
-    category: "job",
-    type: "Full-time",
-    title: "Film Editor",
-    location: "Toronto, Canada",
-    remote: false,
-    timestamp: new Date().toISOString(),
-    description:
-      "Seeking an experienced film editor to work on an upcoming independent feature film. Must have proficiency in Adobe Premiere Pro and DaVinci Resolve.",
-  },
-  {
-    id: 2,
-    organization_name: "Indie Films Co.",
-    category: "job",
-    type: "Part-time",
-    title: "Screenwriter",
-    location: "Vancouver, Canada",
-    remote: true,
-    timestamp: new Date().toISOString(),
-    description:
-      "Looking for a talented screenwriter to develop an original screenplay for an upcoming project.",
-  },
-];
-
-export default function JobTable() {
+export default function JobEventList() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [jobData, setJobData] = useState([]);
   const [favorites, setFavorites] = useState({});
 
+  useEffect(() => {
+    axios
+      .get(`${baseURL}/jobs`)
+      .then((response) => setJobData(response.data))
+      .catch((error) => console.error("Error fetching job data:", error));
+  }, []);
+
   const toggleFavorite = (id) => {
-    setFavorites((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
+    setFavorites((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
   const filteredJobs = jobData.filter(
@@ -55,21 +30,21 @@ export default function JobTable() {
   );
 
   return (
-    <div className="job-table">
-      {/* Title and Search Section */}
-      <div className="job-table__header">
+    <div className="job-event-list">
+      {/* Header Section */}
+      <div className="job-event-list__header">
         <h2>Job Board</h2>
         <input
           type="text"
           placeholder="Search for jobs..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="job-table__search"
+          className="job-event-list__search"
         />
       </div>
 
       {/* Table Headers */}
-      <div className="job-table__labels">
+      <div className="job-event-list__labels">
         <span>Title</span>
         <span>Location</span>
         <span>Company</span>
@@ -78,11 +53,11 @@ export default function JobTable() {
       </div>
 
       {/* Job Listings */}
-      <div className="job-table__list">
+      <div className="job-event-list__list">
         {filteredJobs.map((job) => (
-          <div key={job.id} className="job-table__row">
+          <div key={job.id} className="job-event-list__row">
             <span
-              className="job-table__title"
+              className="job-event-list__title"
               onClick={() => alert(`Opening job: ${job.title}`)}
             >
               {job.title}
@@ -90,7 +65,7 @@ export default function JobTable() {
             <span>{job.location}</span>
             <span>{job.organization_name}</span>
             <span>{job.type}</span>
-            <span className="job-table__actions">
+            <span className="job-event-list__actions">
               <button className="apply-button">Apply</button>
               <span
                 onClick={() => toggleFavorite(job.id)}
