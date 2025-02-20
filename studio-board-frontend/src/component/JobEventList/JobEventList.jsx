@@ -3,9 +3,9 @@ import JobEventCard from "../JobEventCard/JobEventCard";
 import ApplyModal from "../ApplyModal/ApplyModal";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+// import { FaHeart, FaRegHeart } from "react-icons/fa";
 
-const baseURL = "http://localhost:8080";
+const baseURL = "http://localhost:3000";
 
 export default function JobEventList() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,8 +15,21 @@ export default function JobEventList() {
   useEffect(() => {
     axios
       .get(`${baseURL}/jobs`)
-      .then((response) => setJobData(response.data))
-      .catch((error) => console.error("Error fetching job data:", error));
+      .then((response) => {
+        console.log("API response:", response.data); // Log response
+
+        // Ensure response data is an array before setting state
+        if (Array.isArray(response.data)) {
+          setJobData(response.data);
+        } else {
+          console.error("Unexpected API response format:", response.data);
+          setJobData([]); // Fallback to empty array to prevent crashes
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching job data:", error);
+        setJobData([]); // Ensure jobData doesn't remain undefined
+      });
   }, []);
 
   const toggleFavorite = (id) => {

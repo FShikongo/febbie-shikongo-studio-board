@@ -64,7 +64,7 @@
       flex-grow: 1;
 
       &:focus {
-        border-color: $instock-indigo;
+        border-color: $studio-blue;
         outline: none;
       }
 
@@ -118,7 +118,7 @@
   &__title {
     flex: 2;
     cursor: pointer;
-    color: $instock-indigo;
+    color: $studio-blue;
     font-weight: bold;
 
     &:hover {

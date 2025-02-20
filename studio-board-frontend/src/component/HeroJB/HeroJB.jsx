@@ -5,7 +5,7 @@ import bts from "../../assets/Gif/bts.gif";
 import makeup from "../../assets/Gif/hair-makeup.gif";
 import cannesff from "../../assets/Gif/festival-de-cannes.gif";
 
-const feature = [
+const heroVideos = [
   { id: "video1", video: bts },
   { id: "video2", video: makeup },
   { id: "video3", video: cannesff },
