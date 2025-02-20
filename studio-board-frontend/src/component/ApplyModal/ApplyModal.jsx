@@ -5,13 +5,8 @@ import CloseIcon from "../../assets/icons/close-24px.svg";
 
 ReactModal.setAppElement("#root");
 
-export default function InventoryDeleteModal({
-  isOpen,
-  inventory,
-  onCancel,
-  onDelete,
-}) {
-  if (!inventory) return null;
+export default function ApplyModal({ isOpen, jobOrEvent, onCancel, onApply }) {
+  if (!jobOrEvent) return null;
 
   return (
     <ReactModal
@@ -30,10 +25,11 @@ export default function InventoryDeleteModal({
         <img src={CloseIcon} alt="Close" />
       </button>
 
-      <h2 className="modal__title">Delete {inventory.item_name} item?</h2>
+      <h2 className="modal__title">Apply for {jobOrEvent.title}</h2>
       <p className="modal__message">
-        Please confirm that you’d like to delete the {inventory.item_name} from
-        the list of inventory. You won’t be able to undo this action.
+        Please confirm that you'd like to apply for the {jobOrEvent.title} at
+        {jobOrEvent.organization}. This application may include submitting a
+        resume or other details depending on the event or job requirements.
       </p>
       <div className="modal__actions">
         <button
@@ -43,10 +39,10 @@ export default function InventoryDeleteModal({
           Cancel
         </button>
         <button
-          className="modal__button modal__button--delete"
-          onClick={() => onDelete(inventory.id)}
+          className="modal__button modal__button--apply"
+          onClick={() => onApply(jobOrEvent.id)}
         >
-          Delete
+          Apply
         </button>
       </div>
     </ReactModal>
