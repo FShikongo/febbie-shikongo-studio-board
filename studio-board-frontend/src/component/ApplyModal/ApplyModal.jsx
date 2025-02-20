@@ -1,6 +1,6 @@
 import React from "react";
 import ReactModal from "react-modal";
-import "./Modal.scss";
+import "./ApplyModal.scss";
 import CloseIcon from "../../assets/icons/close-24px.svg";
 
 ReactModal.setAppElement("#root");

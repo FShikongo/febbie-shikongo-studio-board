@@ -16,7 +16,7 @@ li {
   padding: 1.5rem 1rem;
   gap: 1rem;
   @include body--medium;
-  color: $instock-black;
+  color: $studio-black;
 
   &:first-child {
     border-top: none;
@@ -75,7 +75,7 @@ li {
   &__name {
     display: flex;
     gap: 0.25rem;
-    color: $instock-indigo;
+    color: $studio-black;
     align-items: center;
     @include body--medium;
     font-weight: 600;

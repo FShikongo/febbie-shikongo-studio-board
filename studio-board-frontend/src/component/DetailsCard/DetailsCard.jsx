@@ -1,12 +1,12 @@
 import "./DetailsCard.scss";
-import "./Details.scss";
+
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import arrowBack from "../../assets/icons/arrow_back-24px.svg";
 import saveIcon from "../../assets/icons/sort-24px.svg";
 import applyIcon from "../../assets/icons/sort-24px.svg";
-import appyModal from "../InventoryDeleteModal/InventoryDeleteModal.jsx";
+import appyModal from "../ApplyModal/ApplyModal";
 
 export default function Details() {
   const baseURL = "http://localhost:8080";
