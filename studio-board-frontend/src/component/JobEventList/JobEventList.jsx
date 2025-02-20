@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom"; //remove
 
+import JobEventCard from "../JobEventCard/JobEventCard";
+import ApplyModal from "../ApplyModal/ApplyModal";
+
 const baseURL = "http://localhost:8080";
 
 const jobData = [

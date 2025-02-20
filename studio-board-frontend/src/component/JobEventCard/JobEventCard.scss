@@ -1,0 +1,132 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+
+li {
+  :hover {
+    background-color: $light-grey;
+  }
+}
+
+.jobboard-card {
+  display: flex;
+  margin: 0;
+  border-top: 2px solid $cloud;
+  padding: 1.5rem 1rem;
+  gap: 1rem;
+  @include body--medium;
+  color: $instock-black;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:hover {
+    background-color: $light-grey;
+  }
+
+  @include tablet {
+    padding: 1rem 2rem;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      width: 40%;
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include tablet {
+      justify-content: center;
+      width: 50%;
+    }
+
+    &--top {
+      height: auto;
+    }
+
+    &--bottom {
+      height: 5rem;
+    }
+  }
+
+  &__label {
+    color: $slate;
+    font-size: 0.688rem;
+
+    @include tablet {
+      display: none;
+      font-size: 0.75rem;
+    }
+  }
+
+  &__name {
+    display: flex;
+    gap: 0.25rem;
+    color: $instock-indigo;
+    align-items: center;
+    @include body--medium;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $cloud;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      width: 40%;
+    }
+  }
+
+  &__contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__apply-icon {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+
+  &__like-icon {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+  &__actions {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      width: 20%;
+      gap: 1rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography";
+
+.warehouse-list {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 90%;
+  margin-top: 120px;
+  margin: 0 auto;
+  margin-top: -40px;
+  filter: drop-shadow(0px 4px 8px rgba(43, 43, 43, 0.1137254902));
+  border-radius: 4px;
+
+  @include tablet {
+    margin-top: -70px;
+  }
+
+  @include desktop {
+    max-width: 1020px;
+  }
+
+  &__header-name {
+    @include table-header;
+  }
+
+  &__header {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0.5rem 2rem;
+      background-color: $light-grey;
+      color: $slate;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.25rem;
+      flex: 1 1 20%;
+
+      &--contact-info {
+        flex: 1 1 27%;
+      }
+
+      &--actions {
+        justify-content: flex-end;
+        flex: 1 1 13%;
+      }
+    }
+  }
+}
+
+.warehouse-top {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+
+  &__title {
+    @include page-header;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+    gap: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      width: 60%;
+    }
+  }
+  &__search {
+    background-image: url(../../assets/icons/search-24px.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+    height: 2.25rem;
+    padding: 0 1rem;
+    border: 2px solid $cloud;
+    border-radius: 20px;
+    font-family: "Titillium Web", "Courier New", Courier, monospace;
+    flex-grow: 1;
+
+    &:focus {
+      border-color: $instock-indigo;
+      outline: none;
+    }
+
+    @include tablet {
+      height: 2.375rem;
+    }
+  }
+
+  &__button {
+    @include button-primary;
+    cursor: pointer;
+  }
+}
