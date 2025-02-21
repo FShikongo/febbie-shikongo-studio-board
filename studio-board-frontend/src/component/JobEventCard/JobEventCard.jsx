@@ -4,6 +4,8 @@ import chevronRight from "../../assets/icons/chevron_right-24px.svg";
 import likeIcon from "../../assets/icons/icon-like.svg";
 import applyIcon from "../../assets/icons/edit-24px.svg";
 
+const baseURL = "http://localhost:5000";
+
 export default function JobEventCard({ opportunities, baseURL, onApply }) {
   const navigate = useNavigate();
 
