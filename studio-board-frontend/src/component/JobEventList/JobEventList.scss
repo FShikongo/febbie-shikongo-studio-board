@@ -1,25 +1,19 @@
-@use "../../styles/partials/global" as *;
+@use "../../styles/partials/global";
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/typography";
+@use "../../styles/partials/typography" as *;
 
 .job-event-list {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: $white;
   width: 90%;
   margin: 0 auto;
-  margin-top: -40px;
+  // margin-top: -40px;
   filter: drop-shadow(0px 4px 8px rgba(43, 43, 43, 0.11));
   border-radius: 4px;
-
-  @include tablet {
-    margin-top: -70px;
-  }
-
-  @include desktop {
-    max-width: 1020px;
-  }
+  margin-top: -20px; //-70px
+  max-width: 1060px;
 
   &__header {
     display: flex;
@@ -33,9 +27,9 @@
       padding: 2rem 1.5rem;
     }
 
-    h2 {
-      @include page-header;
-    }
+    // h2 {
+    //   // @include page-header;
+    // }
 
     &-search {
       display: flex;
@@ -57,35 +51,26 @@
       background-repeat: no-repeat;
       background-position: calc(100% - 1rem) center;
       height: 2.25rem;
-      padding: 0 1rem;
+      padding: 0 2rem;
       border: 2px solid $cloud;
       border-radius: 20px;
-      font-family: "Titillium Web", "Courier New", Courier, monospace;
       flex-grow: 1;
 
       &:focus {
         border-color: $studio-blue;
         outline: none;
       }
-
-      @include tablet {
-        height: 2.375rem;
-      }
     }
   }
 
   &__labels {
-    display: none;
-
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 0.5rem 2rem;
-      background-color: $light-grey;
-      color: $slate;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 2rem;
+    background-color: $light-grey;
+    color: $slate;
 
     span {
       flex: 1;
@@ -119,7 +104,9 @@
     flex: 2;
     cursor: pointer;
     color: $studio-blue;
+    font-size: 14px;
     font-weight: bold;
+    // max-width: 30px;
 
     &:hover {
       text-decoration: underline;
@@ -138,7 +125,7 @@
 
     .favorite-icon {
       cursor: pointer;
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
   }
 }

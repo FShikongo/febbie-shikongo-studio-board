@@ -7,16 +7,21 @@
   justify-content: center;
   font-size: 15px;
   background-color: $studio-black; // Adjust to match design
-  color: $white;
+  // color: $white;
   height: 6rem;
   padding: 1rem 2rem;
+}
+.header__logo {
+  width: 10rem;
+  justify-content: center;
+  margin-right: 18rem;
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -32,7 +37,7 @@
 
 .header__label2 {
   list-style: none;
-  margin-left: 20rem;
+  margin-left: 18rem;
 }
 
 .header__link {
@@ -43,10 +48,12 @@
 
   &:hover {
     color: $studio-blue; // Adjust hover color
+    background-color: none;
   }
 
   &--active {
     border-bottom: 2px solid $studio-blue; // Active state indicator
+    background-color: none;
   }
 }
 
@@ -60,6 +67,7 @@
   display: flex;
   flex-direction: row;
   gap: 1rem; // Space between icons
+  padding: 0 2rem;
 
   a {
     color: $white;

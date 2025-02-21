@@ -17,6 +17,7 @@ li {
   gap: 1rem;
   @include body--medium;
   color: $studio-black;
+  background-color: $studio-purple;
 
   &:first-child {
     border-top: none;

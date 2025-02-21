@@ -3,7 +3,7 @@ import JobEventCard from "../JobEventCard/JobEventCard";
 import ApplyModal from "../ApplyModal/ApplyModal";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const baseURL = "http://localhost:5000";
 

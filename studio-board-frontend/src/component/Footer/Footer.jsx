@@ -1,5 +1,5 @@
 import "./Footer.scss";
-// import logo from "../../assets/StudioLogo/Studio_Logo_Blue-Font_White-Background.png";
+import logo from "../../assets/StudioLogo/Studio_Logo2.png";
 
 import facebook from "../../assets/Icons/Icon-facebook.svg";
 import twitter from "../../assets/Icons/Icon-twitter.svg";
@@ -8,11 +8,12 @@ import instagram from "../../assets/Icons/Icon-instagram.svg";
 export default function footer() {
   return (
     <footer className="footer">
+      <div className="footer__logo">
+        <a href="/">
+          <img className="header__logo" src={logo} alt="Studio Board Logo" />
+        </a>
+      </div>
       <div className="footer__container">
-        <div className="footer__logo">
-          {/* <img className="footer__logo-image" src={logo} /> */}
-        </div>
-
         <section className="footer__subscribe">
           <h3 className="footer__subscribe-title">
             Subscribe to our newsletter

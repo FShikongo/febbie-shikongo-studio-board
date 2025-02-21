@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import logo from "../../assets/StudioLogo/Studio_Logo_Blue-Font_White-Background.png";
+import logo from "../../assets/StudioLogo/Studio_Logo2.png";
 import { NavLink } from "react-router-dom";
 
 import facebook from "../../assets/Icons/Icon-facebook.svg";
@@ -13,7 +13,13 @@ export default function Header() {
       <header className="header">
         <div className="header__container">
           <div className="header__home">
-            {/* <img className="header__logo-image" src={logo} /> */}
+            <a href="/">
+              <img
+                className="header__logo"
+                src={logo}
+                alt="Studio Board Logo"
+              />
+            </a>
           </div>
 
           <ul className="header__nav">
