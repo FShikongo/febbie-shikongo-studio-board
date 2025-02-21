@@ -2,91 +2,81 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-/* Features Section */
+$light-grey: #f9f9f9;
+$white: #ffffff;
+$studio-blue: #007bff;
+
 .features {
-  height: 90vh;
-  padding: 4rem 4rem;
-  text-align: center;
+  padding: 4rem 2rem;
   background-color: $light-grey;
-}
-
-.features__title {
-  font-size: 2rem;
-  margin-bottom: 2.7rem;
-}
-
-.features__list {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.features__card {
-  height: 60vh;
-  width: 30%;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: $white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-}
-
-.features__card-image {
-  height: 80%; /* Occupies top 80% of the card */
-  width: 100%; /* Ensures the image takes the full width */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  position: relative;
-}
 
-.features__card-title {
-  font-size: 1.5rem;
-  background-color: $studio-blue;
-  color: white;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.features__card-text {
-  height: 20%; /* Ensures this section takes the remaining 20% */
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #f9f9f9; /* Optional: Adds a background to differentiate from the image */
-}
-
-.features__card-description {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .features {
-    padding: 2rem;
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
   }
 
-  .features__list {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__item {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: $white; // Default background
+
+    &--alt {
+      background-color: $light-grey; // Alternating background
+    }
   }
 
-  .features__card {
-    width: 80%; // Make it take full width on smaller screens
+  &__image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+  }
+
+  &__text {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: #555;
+  }
+}
+
+// Desktop: Arrange images & text in a row
+@media (min-width: 768px) {
+  .features__item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 3rem;
+
+    &--alt {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .features__image {
+    width: 45%;
+    height: 300px;
+  }
+
+  .features__text {
+    width: 45%;
+    max-width: 500px;
   }
 }
