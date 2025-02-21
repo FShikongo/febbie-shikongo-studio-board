@@ -1,7 +1,7 @@
-@use "../../styles/partials/global" as *;
+@use "../../styles/partials/global";
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/typography";
+@use "../../styles/partials/typography" as *;
 
 .jobboard-card {
   background-color: #fff;
