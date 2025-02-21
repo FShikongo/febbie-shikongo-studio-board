@@ -3,6 +3,9 @@
 @use "../../styles/partials/variables" as *;
 
 .header {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
   background-color: $studio-black; // Adjust to match design
   color: $white;
   height: 6rem;

@@ -9,7 +9,7 @@ import applyIcon from "../../assets/icons/sort-24px.svg";
 import appyModal from "../ApplyModal/ApplyModal";
 
 export default function Details() {
-  const baseURL = "http://localhost:8080";
+  const baseURL = "http://localhost:3000";
 
   const { id: itemId } = useParams();
   const [warehouse, setWarehouse] = useState([]);
