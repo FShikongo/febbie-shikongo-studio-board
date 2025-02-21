@@ -27,6 +27,24 @@
     }
   }
 
+  &__search {
+    width: 100%;
+    max-width: 250px;
+    height: 2.5rem;
+    padding: 0 2.5rem;
+    border: 2px solid $cloud;
+    border-radius: 25px;
+    background: url(../../assets/icons/search-24px.svg) no-repeat right 1rem
+      center;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus {
+      border-color: $studio-blue;
+      outline: none;
+    }
+  }
+
   &__labels {
     display: flex;
     justify-content: space-between;
@@ -69,11 +87,11 @@
     }
 
     span {
-      font-size: 0.85rem; // Adjusted font size for better fit
+      font-size: 0.85rem;
       padding-right: 1rem;
-      justify-content: flex-start;
-      display: flex;
-      align-items: center;
+      align-self: flex-start;
+      text-align: left;
+      flex: 1;
     }
   }
 
@@ -97,6 +115,7 @@
     .apply-button {
       @include button-primary;
       cursor: pointer;
+      font-size: 0.85rem;
     }
 
     .favorite-icon {

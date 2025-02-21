@@ -85,7 +85,11 @@ export default function JobEventList() {
                 onClick={() => toggleFavorite(job.id)}
                 className="favorite-icon"
               >
-                {favorites[job.id] ? <FaHeart color="red" /> : <FaRegHeart />}
+                {favorites[job.id] ? (
+                  <FaHeart color="$studio-blue" />
+                ) : (
+                  <FaRegHeart />
+                )}
               </span>
             </span>
           </div>
