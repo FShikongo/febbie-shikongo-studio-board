@@ -4,32 +4,38 @@
 
 /* Features Section */
 .features {
-  height: 60vh;
+  height: 90vh;
   padding: 4rem 4rem;
   text-align: center;
+  background-color: $light-grey;
 }
 
 .features__title {
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 2.7rem;
 }
 
 .features__list {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .features__card {
-  height: 50vh;
+  height: 60vh;
   width: 30%;
   border-radius: 8px;
   overflow: hidden;
+  background-color: $white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .features__card-image {
-  height: 200px;
+  flex-grow: 1;
+  height: 70%;
   background-size: cover;
   background-position: center;
   color: white;
@@ -42,16 +48,44 @@
 
 .features__card-title {
   font-size: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  background-color: $studio-blue;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .features__card-text {
+  height: 20%; // Makes sure text takes only 30%
   padding: 15px;
-  top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .features__card-description {
   font-size: 1rem;
   color: #555;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
+    padding: 2rem;
+  }
+
+  .features__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features__card {
+    width: 80%; // Make it take full width on smaller screens
+  }
 }
