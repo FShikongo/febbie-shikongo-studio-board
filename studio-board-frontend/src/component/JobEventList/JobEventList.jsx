@@ -47,7 +47,7 @@ export default function JobEventList() {
     <div className="job-event-list">
       {/* Header Section */}
       <div className="job-event-list__header">
-        <h2>Job Board</h2>
+        <h2>Studio Board</h2>
         <input
           type="text"
           placeholder="Search for jobs..."
