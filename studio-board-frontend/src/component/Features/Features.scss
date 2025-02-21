@@ -34,8 +34,8 @@
 }
 
 .features__card-image {
-  flex-grow: 1;
-  height: 70%;
+  height: 80%; /* Occupies top 80% of the card */
+  width: 100%; /* Ensures the image takes the full width */
   background-size: cover;
   background-position: center;
   color: white;
@@ -60,12 +60,13 @@
 }
 
 .features__card-text {
-  height: 20%; // Makes sure text takes only 30%
+  height: 20%; /* Ensures this section takes the remaining 20% */
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  background-color: #f9f9f9; /* Optional: Adds a background to differentiate from the image */
 }
 
 .features__card-description {

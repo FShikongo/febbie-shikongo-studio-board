@@ -4,40 +4,63 @@
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   font-size: 15px;
-  background-color: $studio-black; // Adjust to match design
-  // color: $white;
+  background-color: $studio-black;
   height: 6rem;
   padding: 1rem 2rem;
-}
-.header__logo {
-  width: 10rem;
-  justify-content: center;
-  margin-right: 18rem;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
 }
 
 .header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-between; // Tablet follows desktop layout
+  }
+}
+
+.header__logo {
+  width: 8rem;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    width: 10rem;
+    justify-self: flex-start; // Align left on tablet & desktop
+  }
 }
 
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
-}
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 
-.header__label {
-  list-style: none;
-}
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
 
-.header__label2 {
-  list-style: none;
-  margin-left: 18rem;
+  @media (min-width: 768px) {
+    flex: 1;
+    justify-content: center; // Center on tablet & desktop
+  }
 }
 
 .header__link {
@@ -45,29 +68,39 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
 
   &:hover {
-    color: $studio-blue; // Adjust hover color
-    background-color: none;
+    color: $studio-blue;
   }
 
   &--active {
-    border-bottom: 2px solid $studio-blue; // Active state indicator
-    background-color: none;
+    border-bottom: 2px solid $studio-blue;
   }
 }
 
 .header__right {
   display: flex;
   align-items: center;
-  gap: 2rem; // Space between login & social icons
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: flex-end; // Align right on tablet & desktop
+  }
 }
 
 .header__social-links {
   display: flex;
-  flex-direction: row;
-  gap: 1rem; // Space between icons
+  gap: 1rem;
   padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    display: none; // Hide on mobile
+  }
 
   a {
     color: $white;
@@ -79,3 +112,81 @@
     }
   }
 }
+
+// .header {
+//   display: flex;
+//   justify-content: center;
+//   font-size: 15px;
+//   background-color: $studio-black; // Adjust to match design
+//   // color: $white;
+//   height: 6rem;
+//   padding: 1rem 2rem;
+// }
+// .header__logo {
+//   width: 10rem;
+//   justify-content: center;
+//   margin-right: 18rem;
+// }
+
+// .header__container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   max-width: 1280px;
+//   margin: 0 auto;
+// }
+
+// .header__nav {
+//   display: flex;
+//   align-items: center;
+//   gap: 2rem;
+// }
+
+// .header__label {
+//   list-style: none;
+// }
+
+// .header__label2 {
+//   list-style: none;
+//   margin-left: 18rem;
+// }
+
+// .header__link {
+//   color: $white;
+//   text-decoration: none;
+//   font-weight: 500;
+//   transition: color 0.3s ease;
+
+//   &:hover {
+//     color: $studio-blue; // Adjust hover color
+//     background-color: none;
+//   }
+
+//   &--active {
+//     border-bottom: 2px solid $studio-blue; // Active state indicator
+//     background-color: none;
+//   }
+// }
+
+// .header__right {
+//   display: flex;
+//   align-items: center;
+//   gap: 2rem; // Space between login & social icons
+// }
+
+// .header__social-links {
+//   display: flex;
+//   flex-direction: row;
+//   gap: 1rem; // Space between icons
+//   padding: 0 2rem;
+
+//   a {
+//     color: $white;
+//     text-decoration: none;
+//     transition: color 0.3s ease;
+
+//     &:hover {
+//       color: $studio-blue;
+//     }
+//   }
+// }

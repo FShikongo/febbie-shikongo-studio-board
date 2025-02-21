@@ -47,7 +47,7 @@ export default function Header() {
                 Event
               </NavLink>
             </li>
-            <li className="header__label">
+            {/* <li className="header__label">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
@@ -58,7 +58,7 @@ export default function Header() {
               >
                 Contact
               </NavLink>
-            </li>
+            </li> */}
             <li className="header__label2">
               <NavLink
                 to="/login"
