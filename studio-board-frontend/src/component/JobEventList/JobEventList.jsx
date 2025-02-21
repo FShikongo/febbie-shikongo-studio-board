@@ -13,8 +13,9 @@ export default function JobEventList() {
   const [favorites, setFavorites] = useState({});
 
   useEffect(() => {
+    // Move the API call inside the useEffect
     axios
-      .get(`${baseURL}/jobs`)
+      .get(`${baseURL}/api/jobs`) // Correct URL with "/api"
       .then((response) => {
         console.log("API response:", response.data); // Log response
 
