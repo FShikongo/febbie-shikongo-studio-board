@@ -25,7 +25,7 @@ export default function Header() {
           <ul className="header__nav">
             <li className="header__label">
               <NavLink
-                to="/"
+                to="/jobboard"
                 className={({ isActive }) =>
                   isActive
                     ? "header__link header__link--active"
