@@ -30,10 +30,10 @@ $studio-blue: #007bff;
     text-align: center;
     gap: 1rem;
     padding: 2rem;
-    background-color: $white; // Default background
+    background-color: $white;
 
     &--alt {
-      background-color: $light-grey; // Alternating background
+      background-color: $light-grey;
     }
   }
 
@@ -53,6 +53,27 @@ $studio-blue: #007bff;
   &__description {
     font-size: 1rem;
     color: #555;
+  }
+
+  &__company {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: $studio-blue;
+  }
+
+  &__contact {
+    font-size: 1rem;
+    color: #666;
+
+    a {
+      color: $studio-blue;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
