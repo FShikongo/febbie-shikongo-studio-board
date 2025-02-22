@@ -1,174 +1,80 @@
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import ReactModal from "react-modal";
 import "./DetailsCard.scss";
-
-import { Link, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import arrowBack from "../../assets/icons/arrow_back-24px.svg";
-import saveIcon from "../../assets/icons/sort-24px.svg";
-import applyIcon from "../../assets/icons/sort-24px.svg";
-import appyModal from "../ApplyModal/ApplyModal";
+import ApplyModal from "../ApplyModal/ApplyModal";
+import axios from "axios";
 
-export default function Details() {
-  const baseURL = "http://localhost:3000";
+ReactModal.setAppElement("#root");
 
-  const { id: itemId } = useParams();
-  const [warehouse, setWarehouse] = useState([]);
-  const [inventory, setInventory] = useState([]);
+const DetailsCard = () => {
+  const { id: jobId } = useParams();
+  const [opportunity, setOpportunity] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedInventory, setSelectedInventory] = useState(null);
+
+  console.log("Job ID from URL:", jobId);
 
   useEffect(() => {
-    const getWarehouseDetails = async () => {
+    const getJobBoard = async () => {
       try {
-        const response = await axios.get(`${baseURL}/api/warehouses/${itemId}`);
-        setWarehouse(response.data);
-      } catch (error) {
-        console.log("Error fetching warehouse details:", error);
-      }
-    };
-
-    const getWarehouseInventory = async () => {
-      try {
-        const response = await axios.get(
-          `${baseURL}/api/warehouses/${itemId}/inventories`
+        const response = await fetch(
+          `http://localhost:5000/opportunities/${jobId}`
         );
-        setInventory(response.data);
+        if (!response.ok) {
+          throw new Error("Failed to fetch opportunity");
+        }
+        const data = await response.json();
+        setOpportunity(data);
       } catch (error) {
-        console.log("Error fetching warehouse inventory:", error);
+        console.error("Error fetching opportunity:", error);
       }
     };
-    getWarehouseDetails();
-    getWarehouseInventory();
-  }, [itemId]);
 
-  const handleOpenModal = (inventory) => {
-    setSelectedInventory(inventory);
-    setModalIsOpen(true);
-  };
+    getJobBoard();
+  }, [jobId]);
 
-  const handleCloseModal = () => {
-    setSelectedInventory(null);
-    setModalIsOpen(false);
-  };
-
-  const handleDeleteInventory = async (inventoryId) => {
-    try {
-      await axios.delete(`${baseURL}/api/inventories/${inventoryId}`);
-      setInventory((prev) => prev.filter((i) => i.id !== inventoryId)); //
-      handleCloseModal();
-    } catch (error) {
-      console.error("Error deleting inventory:", error);
-      alert("Failed to delete inventory.");
-    }
-  };
+  if (!opportunity) {
+    return <p>Loading...</p>;
+  }
 
   return (
-    <div className="page-container">
-      <div className="page-header">
-        <Link to="/">
-          <img
-            className="page-header__icon-arrow-back"
-            src={arrowBack}
-            alt="Back arrow icon"
-          />
-        </Link>
+    <div className="details-card">
+      <Link to="/jobboard">
+        <img
+          className="page-header__icon-arrow-back"
+          src={arrowBack}
+          alt="Back arrow icon"
+        />
+      </Link>
+      <h2 className="details-title">{opportunity.title}</h2>
+      <p className="details-organization">{opportunity.organization_name}</p>
+      <p className="details-location">Location: {opportunity.location}</p>
+      <p className="details-posted">Posted: {opportunity.posted}</p>
+      <p className="details-category">Category: {opportunity.category}</p>
+      <p className="details-type">Type: {opportunity.type}</p>
+      <p className="details-description">{opportunity.type_description}</p>
+      <p className="details-org-description">{opportunity.description}</p>
+      <p className="details-contact">
+        Contact: {opportunity.contact_email} | {opportunity.phone}
+      </p>
+      <a
+        className="details-website"
+        href={opportunity.website}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit Website
+      </a>
+      <button onClick={() => setModalIsOpen(true)}>Apply</button>
 
-        <h2 className="page-header__title">{warehouse.warehouse_name}</h2>
-        <Link to={`/warehouses/${warehouse.id}/edit`}>
-          <img
-            src={editIcon}
-            alt="Edit Icon"
-            className="item-details__edit-mobile"
-          />
-          <div className="item-details__edit-tablet">
-            <img
-              src={editIcon}
-              alt="Edit Icon"
-              className="item-details__edit-icon"
-            />
-            <p className="item-details__edit-text">Edit</p>
-          </div>
-        </Link>
-      </div>
-
-      <div className="detailContainer">
-        <div className="warehouseAddress">
-          <span className="warehouseAddress__title">ADDRESS</span>
-          <p className="warehouseAddress__address">
-            {`${warehouse.address}, ${warehouse.city}, ${warehouse.country}`}
-          </p>
-        </div>
-
-        <div className="contactContainer">
-          <div className="contactName">
-            <span className="contactName__title">CONTACT NAME:</span>
-            <p className="contactName__name">{warehouse.contact_name}</p>
-            <p className="contactName__position">
-              {warehouse.contact_position}
-            </p>
-          </div>
-
-          <div className="contactInfo">
-            <span className="contactInfo__title">CONTACT INFORMATION:</span>
-            <p className="contactInfo__phone">{warehouse.contact_phone}</p>
-            <p className="contactInfo__email">{warehouse.contact_email}</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="item-by-warehouse__label">
-        <div className="item-by-warehouse__label-item item-by-warehouse__label--item">
-          <p className="item-by-warehouse__label-name">INVENTORY ITEM</p>
-          <img
-            src={sortIcon}
-            alt="Sort Icon"
-            className="item-by-warehouse__label-image"
-          />
-        </div>
-        <div className="item-by-warehouse__label-item item-by-warehouse__label-item--category">
-          <p className="item-by-warehouse__label-name">CATEGORY</p>
-          <img
-            src={sortIcon}
-            alt="Sort Icon"
-            className="item-by-warehouse__label-image"
-          />
-        </div>
-        <div className="item-by-warehouse__label-item item-by-warehouse__label-item--status">
-          <p className="item-by-warehouse__label-name">STATUS</p>
-          <img
-            src={sortIcon}
-            alt="Sort Icon"
-            className="item-by-warehouse__label-image"
-          />
-        </div>
-        <div className="item-by-warehouse__label-item item-by-warehouse__label-item--qty">
-          <p className="item-by-warehouse__label-name">QUANTITY</p>
-          <img
-            src={sortIcon}
-            alt="Sort Icon"
-            className="item-by-warehouse__label-image"
-          />
-        </div>
-        <div className="item-by-warehouse__label-item item-by-warehouse__label-item--actions">
-          <p className="item-by-warehouse__label-name ">ACTIONS</p>
-        </div>
-      </div>
-      <ul>
-        {inventory.map((item) => (
-          <DetailsCard
-            key={item.id}
-            inventoryItem={item}
-            onDelete={() => handleOpenModal(item)}
-          />
-        ))}
-      </ul>
-
-      <InventoryDeleteModal
+      <ApplyModal
         isOpen={modalIsOpen}
-        inventory={selectedInventory}
-        onCancel={handleCloseModal}
-        onDelete={handleDeleteInventory}
+        opportunity={opportunity}
+        onCancel={() => setModalIsOpen(false)}
       />
     </div>
   );
-}
+};
+
+export default DetailsCard;

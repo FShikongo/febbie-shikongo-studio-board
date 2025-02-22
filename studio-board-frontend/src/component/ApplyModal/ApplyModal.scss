@@ -15,87 +15,68 @@ $cloud: #bdc5d5;
 $graphite: #232940;
 $light-grey: #f7f8f9;
 
-.modal__close-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 24px;
-  height: 24px;
-}
-
-.dialog-content {
+.details-card {
   max-width: 600px;
-  padding: 2rem;
+  margin: 20px auto;
+  padding: 20px;
+  background: $white;
   border-radius: 8px;
-  background-color: $white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dialog-header {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: $studio-black;
-}
 
-.input,
-.textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid $cloud;
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: $light-grey;
-  color: $studio-black;
-}
+  .page-header__icon-arrow-back {
+    width: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
 
-.textarea {
-  min-height: 100px;
-}
+  .details-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $studio-blue;
+  }
 
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
+  .details-organization,
+  .details-location,
+  .details-posted,
+  .details-category,
+  .details-type,
+  .details-description,
+  .details-org-description,
+  .details-contact {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: $slate;
+  }
 
-.button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-}
+  .details-website {
+    display: inline-block;
+    margin-top: 10px;
+    color: $studio-blue;
+    text-decoration: none;
+    font-weight: bold;
 
-.button--primary {
-  background-color: $studio-blue;
-  color: $white;
-}
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
-.button--outline {
-  background-color: transparent;
-  border: 1px solid $studio-blue;
-  color: $studio-blue;
-}
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: $studio-blue;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
 
-.modal-button {
-  padding: 10px 16px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-}
-
-.cancel {
-  background: #ccc;
-  color: #333;
-}
-
-.apply {
-  background-color: $studio-blue;
-  color: $white;
+    &:hover {
+      background-color: $graphite;
+    }
+  }
 }

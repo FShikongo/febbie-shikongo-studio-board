@@ -13,7 +13,7 @@ export default function Header() {
       <header className="header">
         <div className="header__container">
           <div className="header__home">
-            <a href="/">
+            <a href="/home">
               <img
                 className="header__logo"
                 src={logo}

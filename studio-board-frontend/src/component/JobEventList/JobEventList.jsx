@@ -1,5 +1,105 @@
+// // import "./JobEventList.scss";
+// // import ApplyModal from "../ApplyModal/ApplyModal";
+// // import axios from "axios";
+// // import { useEffect, useState } from "react";
+// // import { FaHeart, FaRegHeart } from "react-icons/fa";
+
+// // const baseURL = "http://localhost:5000";
+
+// // export default function JobEventList() {
+// //   const [searchTerm, setSearchTerm] = useState("");
+// //   const [jobData, setJobData] = useState([]);
+// //   const [favorites, setFavorites] = useState({});
+
+// //   useEffect(() => {
+// //     // Move the API call inside the useEffect
+// //     axios
+// //       .get(`${baseURL}/api/jobs`) // Correct URL with "/api"
+// //       .then((response) => {
+// //         console.log("API response:", response.data); // Log response
+
+// //         // Ensure response data is an array before setting state
+// //         if (Array.isArray(response.data)) {
+// //           setJobData(response.data);
+// //         } else {
+// //           console.error("Unexpected API response format:", response.data);
+// //           setJobData([]); // Fallback to empty array to prevent crashes
+// //         }
+// //       })
+// //       .catch((error) => {
+// //         console.error("Error fetching job data:", error);
+// //         setJobData([]); // Ensure jobData doesn't remain undefined
+// //       });
+// //   }, []);
+
+// //   const toggleFavorite = (id) => {
+// //     setFavorites((prev) => ({ ...prev, [id]: !prev[id] }));
+// //   };
+
+// //   const filteredJobs = jobData.filter(
+// //     (job) =>
+// //       job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+// //       job.organization_name.toLowerCase().includes(searchTerm.toLowerCase())
+// //   );
+
+// //   return (
+// //     <div className="job-event-list">
+// //       {/* Header Section */}
+// //       <div className="job-event-list__header">
+// //         <h2>Studio Board</h2>
+// //         <input
+// //           type="text"
+// //           placeholder="Search for jobs..."
+// //           value={searchTerm}
+// //           onChange={(e) => setSearchTerm(e.target.value)}
+// //           className="job-event-list__search"
+// //         />
+// //       </div>
+
+// //       {/* Table Headers */}
+// //       <div className="job-event-list__labels">
+// //         <span>Title</span>
+// //         <span>Location</span>
+// //         <span>Company</span>
+// //         <span>Type</span>
+// //         <span>Actions</span>
+// //       </div>
+
+// //       {/* Job Listings */}
+// //       <div className="job-event-list__list">
+// //         {filteredJobs.map((job) => (
+// //           <div key={job.id} className="job-event-list__row">
+// //             <span
+// //               className="job-event-list__title"
+// //               onClick={() => alert(`Opening job: ${job.title}`)}
+// //             >
+// //               {job.title}
+// //             </span>
+// //             <span>{job.location}</span>
+// //             <span>{job.organization_name}</span>
+// //             <span>{job.type}</span>
+// //             <span className="job-event-list__actions">
+// //               <button className="apply-button">Apply</button>
+// //               <span
+// //                 onClick={() => toggleFavorite(job.id)}
+// //                 className="favorite-icon"
+// //               >
+// //                 {favorites[job.id] ? (
+// //                   <FaHeart color="$studio-blue" />
+// //                 ) : (
+// //                   <FaRegHeart />
+// //                 )}
+// //               </span>
+// //             </span>
+// //           </div>
+// //         ))}
+// //       </div>
+// //     </div>
+// //   );
+// // }
+
 // import "./JobEventList.scss";
-// import ApplyModal from "../ApplyModal/ApplyModal";
+// import ApplyModal from "../ApplyModal/ApplyModal"; // ✅ Correct import
 // import axios from "axios";
 // import { useEffect, useState } from "react";
 // import { FaHeart, FaRegHeart } from "react-icons/fa";
@@ -10,25 +110,25 @@
 //   const [searchTerm, setSearchTerm] = useState("");
 //   const [jobData, setJobData] = useState([]);
 //   const [favorites, setFavorites] = useState({});
+//   const [modalOpen, setModalOpen] = useState(false);
+//   const [selectedJob, setSelectedJob] = useState(null);
 
 //   useEffect(() => {
-//     // Move the API call inside the useEffect
 //     axios
-//       .get(`${baseURL}/api/jobs`) // Correct URL with "/api"
+//       .get(`${baseURL}/api/jobs`)
 //       .then((response) => {
-//         console.log("API response:", response.data); // Log response
+//         console.log("API response:", response.data);
 
-//         // Ensure response data is an array before setting state
 //         if (Array.isArray(response.data)) {
 //           setJobData(response.data);
 //         } else {
 //           console.error("Unexpected API response format:", response.data);
-//           setJobData([]); // Fallback to empty array to prevent crashes
+//           setJobData([]);
 //         }
 //       })
 //       .catch((error) => {
 //         console.error("Error fetching job data:", error);
-//         setJobData([]); // Ensure jobData doesn't remain undefined
+//         setJobData([]);
 //       });
 //   }, []);
 
@@ -36,11 +136,18 @@
 //     setFavorites((prev) => ({ ...prev, [id]: !prev[id] }));
 //   };
 
-//   const filteredJobs = jobData.filter(
-//     (job) =>
-//       job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-//       job.organization_name.toLowerCase().includes(searchTerm.toLowerCase())
-//   );
+//   const handleApplyClick = (job) => {
+//     setSelectedJob(job);
+//     setModalOpen(true);
+//   };
+
+//   const filteredJobs = Array.isArray(jobData)
+//     ? jobData.filter(
+//         (job) =>
+//           job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//           job.organization_name.toLowerCase().includes(searchTerm.toLowerCase())
+//       )
+//     : [];
 
 //   return (
 //     <div className="job-event-list">
@@ -79,13 +186,18 @@
 //             <span>{job.organization_name}</span>
 //             <span>{job.type}</span>
 //             <span className="job-event-list__actions">
-//               <button className="apply-button">Apply</button>
+//               <button
+//                 className="apply-button"
+//                 onClick={() => handleApplyClick(job)}
+//               >
+//                 Apply
+//               </button>
 //               <span
 //                 onClick={() => toggleFavorite(job.id)}
 //                 className="favorite-icon"
 //               >
 //                 {favorites[job.id] ? (
-//                   <FaHeart color="$studio-blue" />
+//                   <FaHeart className="favorite-icon__active" />
 //                 ) : (
 //                   <FaRegHeart />
 //                 )}
@@ -94,15 +206,26 @@
 //           </div>
 //         ))}
 //       </div>
+
+//       {/* ApplyModal Component */}
+//       {modalOpen && (
+//         <ApplyModal
+//           isOpen={modalOpen}
+//           onClose={() => setModalOpen(false)}
+//           onApply={(formData) => console.log("Applying with:", formData)}
+//           jobId={selectedJob?.id}
+//         />
+//       )}
 //     </div>
 //   );
 // }
 
 import "./JobEventList.scss";
-import ApplyModal from "../ApplyModal/ApplyModal"; // ✅ Correct import
+import ApplyModal from "../ApplyModal/ApplyModal";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const baseURL = "http://localhost:5000";
 
@@ -176,21 +299,15 @@ export default function JobEventList() {
       <div className="job-event-list__list">
         {filteredJobs.map((job) => (
           <div key={job.id} className="job-event-list__row">
-            <span
-              className="job-event-list__title"
-              onClick={() => alert(`Opening job: ${job.title}`)}
-            >
+            <Link to={`/details/${job.id}`} className="job-event-list__title">
               {job.title}
-            </span>
+            </Link>
             <span>{job.location}</span>
             <span>{job.organization_name}</span>
             <span>{job.type}</span>
             <span className="job-event-list__actions">
-              <button
-                className="apply-button"
-                onClick={() => handleApplyClick(job)}
-              >
-                Apply
+              <button className="apply-button">
+                <Link to={`/details/${job.id}`}>Apply</Link>
               </button>
               <span
                 onClick={() => toggleFavorite(job.id)}

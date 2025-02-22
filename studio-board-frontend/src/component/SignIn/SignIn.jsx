@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
 import "./SignIn.scss";
-
+import { useNavigate } from "react-router-dom";
 import dancing from "../../assets/Gif/Dancing.gif";
 import travolta from "../../assets/Gif/Cigarette-Travolta.gif";
 import garfield from "../../assets/Gif/Andrew-Garfield.gif";
 import damme from "../../assets/Gif/JCVDamme.gif";
 import dandbridge from "../../assets/Gif/Dorothy-Dandridge-Vintage.gif";
+import { useState, useEffect } from "react";
 
 const heroVideos = [
   { id: "video2", video: dancing },
@@ -15,14 +15,14 @@ const heroVideos = [
   { id: "video1", video: garfield },
 ];
 
-export default function SignIn() {
+const SignIn = () => {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroVideos.length);
-    }, 5000); // Change background every 5 seconds
-
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -61,7 +61,7 @@ export default function SignIn() {
             />
           </div>
           <button
-            type="button"
+            type="submit"
             className="signin-button"
             onClick={() => navigate("/home")}
           >
@@ -71,4 +71,6 @@ export default function SignIn() {
       </div>
     </div>
   );
-}
+};
+
+export default SignIn;
