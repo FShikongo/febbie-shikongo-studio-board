@@ -81,3 +81,21 @@ $light-grey: #f7f8f9;
   border: 1px solid $studio-blue;
   color: $studio-blue;
 }
+
+.modal-button {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.cancel {
+  background: #ccc;
+  color: #333;
+}
+
+.apply {
+  background-color: $studio-blue;
+  color: $white;
+}

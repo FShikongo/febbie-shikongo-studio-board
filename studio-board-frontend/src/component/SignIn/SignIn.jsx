@@ -9,9 +9,9 @@ import dandbridge from "../../assets/Gif/Dorothy-Dandridge-Vintage.gif";
 
 const heroVideos = [
   { id: "video2", video: dancing },
+  { id: "video5", video: travolta },
   { id: "video3", video: damme },
   { id: "video4", video: dandbridge },
-  { id: "video5", video: travolta },
   { id: "video1", video: garfield },
 ];
 
@@ -60,7 +60,11 @@ export default function SignIn() {
               required
             />
           </div>
-          <button type="submit" className="signin-button">
+          <button
+            type="button"
+            className="signin-button"
+            onClick={() => navigate("/home")}
+          >
             Sign In
           </button>
         </form>

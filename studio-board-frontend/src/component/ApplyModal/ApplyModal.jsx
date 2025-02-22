@@ -1,14 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import ApplyModal from "../ApplyModal/ApplyModal.scss";
+import "../ApplyModal/ApplyModal.scss"; // ✅ Fixed import
 import CloseIcon from "../../assets/icons/close-24px.svg";
 
 const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
@@ -42,8 +33,8 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-lg p-6 relative">
+    <div className={`apply-modal ${isOpen ? "open" : ""}`}>
+      <div className="modal-content">
         <button
           type="button"
           className="absolute top-4 right-4 modal__close-button"
@@ -52,15 +43,13 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
         >
           <img src={CloseIcon} alt="Close" />
         </button>
-        <DialogHeader>
-          <DialogTitle>
-            {job
-              ? `Apply for ${job.title} at ${job.organization_name}`
-              : "Apply for this Opportunity"}
-          </DialogTitle>
-        </DialogHeader>
+        <h2>
+          {job
+            ? `Apply for ${job.title} at ${job.organization_name}`
+            : "Apply for this Opportunity"}
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <Input
+          <input
             type="text"
             name="name"
             placeholder="Your Name"
@@ -68,7 +57,7 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
             onChange={handleChange}
             required
           />
-          <Input
+          <input
             type="email"
             name="email"
             placeholder="Your Email"
@@ -76,7 +65,7 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
             onChange={handleChange}
             required
           />
-          <Textarea
+          <textarea
             name="message"
             placeholder="Why are you interested?"
             value={formData.message}
@@ -84,15 +73,22 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
             required
           />
           <div className="flex justify-end gap-2">
-            <Button type="button" variant="outline" onClick={onClose}>
+            <button
+              type="button"
+              onClick={onClose}
+              className="modal-button cancel"
+            >
               Cancel
-            </Button>
-            <Button type="submit">Apply</Button>
+            </button>
+            <button type="submit" className="modal-button apply">
+              Apply
+            </button>
           </div>
         </form>
-      </DialogContent>
-    </Dialog>
+      </div>
+    </div>
   );
 };
 
+// ✅ Ensure there is ONLY ONE default export
 export default ApplyModal;
