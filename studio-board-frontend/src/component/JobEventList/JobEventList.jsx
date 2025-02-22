@@ -1,5 +1,4 @@
 import "./JobEventList.scss";
-import JobEventCard from "../JobEventCard/JobEventCard";
 import ApplyModal from "../ApplyModal/ApplyModal";
 import axios from "axios";
 import { useEffect, useState } from "react";

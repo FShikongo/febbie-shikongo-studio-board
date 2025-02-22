@@ -49,7 +49,9 @@ export default function Hero() {
           Your one-stop platform for jobs, events, and networking in the
           entertainment industry.
         </p>
-        <button className="hero__cta-button">Get Started</button>
+        <a href="/jobboard">
+          <button className="hero__cta-button">Get Started</button>
+        </a>
       </div>
     </section>
   );
