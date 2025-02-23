@@ -3,6 +3,7 @@
 @use "../../styles/partials/variables" as *;
 
 .partner-showcase {
+  height: 80vh;
   padding: 4rem 2rem;
   margin-top: 4rem;
   text-align: center;
@@ -11,6 +12,7 @@
   &__title {
     font-size: 2rem;
     margin-bottom: 20px;
+    padding-top: 6rem;
   }
 
   &__text {
@@ -20,7 +22,7 @@
     padding-bottom: 2rem;
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #444;
+    color: $studio-black;
   }
 
   &__logos-container {
@@ -28,6 +30,7 @@
     overflow: hidden;
     position: relative;
     white-space: nowrap; // Prevents wrapping
+    padding-top: 3rem;
   }
 
   &__logos {
