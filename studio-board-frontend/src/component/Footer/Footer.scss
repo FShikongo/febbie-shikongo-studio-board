@@ -74,6 +74,7 @@
   &__connect {
     display: none; // Hide on mobile
     padding: 1rem;
+    text-decoration: none;
     // margin-left: 6rem;
   }
 
@@ -180,6 +181,14 @@
       color: $white;
       text-decoration: none;
     }
+
+    &-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      color: $white;
+      text-decoration: none;
+    }
   }
 
   .footer__social {
@@ -200,6 +209,7 @@
   .footer__container {
     max-width: 1200px;
     gap: 3rem;
+    color: $white;
   }
 
   .footer__logo-img {
@@ -211,10 +221,5 @@
   .footer__social {
     width: 30%;
     min-height: 220px; // Ensures consistent height across all sections
-  }
-
-  .footer__connect-item {
-    color: $white;
-    text-decoration: none;
   }
 }
