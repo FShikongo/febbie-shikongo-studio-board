@@ -48,11 +48,11 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="apply-modal open">
-      <div className="modal-content">
+    <div className="apply-modal-overlay">
+      <div className="apply-modal">
         <button
           type="button"
-          className="absolute top-4 right-4 modal__close-button"
+          className="modal__close-button"
           onClick={onClose}
           aria-label="Close modal"
         >
@@ -63,7 +63,7 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
             ? `Apply for ${job.title} at ${job.organization_name}`
             : "Apply for this Opportunity"}
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="apply-modal__form">
           <input
             type="text"
             name="name"
@@ -87,7 +87,7 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
             onChange={handleChange}
             required
           />
-          <div className="flex justify-end gap-2">
+          <div className="apply-modal__buttons">
             <button
               type="button"
               onClick={onClose}

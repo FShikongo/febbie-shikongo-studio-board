@@ -49,12 +49,16 @@ const DetailsCard = () => {
       </Link>
       <h2 className="details-title">{opportunity.title}</h2>
       <p className="details-organization">{opportunity.organization_name}</p>
+      <p className="details-org-description">
+        About: {opportunity.description}
+      </p>
       <p className="details-location">Location: {opportunity.location}</p>
       <p className="details-posted">Posted: {opportunity.posted}</p>
       <p className="details-category">Category: {opportunity.category}</p>
       <p className="details-type">Type: {opportunity.type}</p>
-      <p className="details-description">{opportunity.type_description}</p>
-      <p className="details-org-description">{opportunity.description}</p>
+      <p className="details-description">
+        Description: {opportunity.type_description}
+      </p>
       <p className="details-contact">
         Contact: {opportunity.contact_email} | {opportunity.phone}
       </p>

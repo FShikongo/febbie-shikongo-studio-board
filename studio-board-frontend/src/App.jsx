@@ -4,7 +4,7 @@ import "./App.scss";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import HomePage from "./pages/HomePage/HomePage";
 import JobBoardPage from "./pages/JobBoardPage/JobBoardPage";
-import DetailsPage from "./pages/DetailsPage/DetailsPage";
+// import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
 
@@ -17,7 +17,6 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/jobboard" element={<JobBoardPage />} />
-          <Route path="/details/:id" element={<DetailsPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
