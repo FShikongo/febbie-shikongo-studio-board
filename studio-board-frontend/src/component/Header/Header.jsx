@@ -68,7 +68,7 @@ export default function Header() {
                     : "header__link"
                 }
               >
-                Login
+                My Dashboard
               </NavLink>
             </li>
           </ul>
