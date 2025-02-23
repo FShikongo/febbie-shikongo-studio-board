@@ -1,0 +1,62 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+$studio-black: #13182c;
+$studio-blue: #22a4e4;
+$white: #ffffff;
+
+$slate: #5c667e;
+$cloud: #bdc5d5;
+
+$graphite: #232940;
+$light-grey: #f7f8f9;
+
+.hero-features {
+  text-align: center;
+  background-color: $light-grey;
+  padding: 40px 20px;
+
+  &__title {
+    color: $studio-black;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  &__item {
+    min-width: 300px;
+    background: $white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__text {
+    padding: 15px;
+  }
+
+  &__title {
+    font-size: 20px;
+    color: $studio-blue;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 16px;
+    color: $slate;
+  }
+}
