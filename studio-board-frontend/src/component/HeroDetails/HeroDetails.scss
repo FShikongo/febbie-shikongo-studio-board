@@ -5,7 +5,7 @@
 .hero {
   position: relative;
   width: 100%;
-  max-height: 80vh;
+  max-height: 70%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -57,19 +57,19 @@
     margin-top: 10px;
   }
 
-//   &__cta-button {
-//     margin-top: 20px;
-//     padding: 12px 24px;
-//     font-size: 1.2rem;
-//     border-radius: 4px;
-//     background: $studio-blue;
-//     border: none;
-//     color: white;
-//     cursor: pointer;
-//     transition: 0.3s;
+  //   &__cta-button {
+  //     margin-top: 20px;
+  //     padding: 12px 24px;
+  //     font-size: 1.2rem;
+  //     border-radius: 4px;
+  //     background: $studio-blue;
+  //     border: none;
+  //     color: white;
+  //     cursor: pointer;
+  //     transition: 0.3s;
 
-//     &:hover {
-//       background: $studio-blue;
-//     }
-//   }
+  //     &:hover {
+  //       background: $studio-blue;
+  //     }
+  //   }
 }

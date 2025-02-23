@@ -34,7 +34,7 @@ const SignIn = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         width: "100%",
-        height: "100vh",
+        height: "70vh",
         position: "relative",
       }}
     >

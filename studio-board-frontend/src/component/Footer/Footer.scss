@@ -5,7 +5,7 @@
 .footer {
   background-color: $studio-black;
   color: $white;
-  padding: 2rem 1rem;
+  padding: 2rem 4rem;
   text-align: center;
   margin-top: 3rem;
 
@@ -13,6 +13,7 @@
     display: flex;
     justify-content: center;
     padding-bottom: 1.5rem;
+    padding-left: 1rem;
 
     &-img {
       width: 120px;
@@ -40,6 +41,7 @@
     &-text {
       font-size: 1rem;
       margin-bottom: 1rem;
+      color: $grey;
     }
 
     &-form {
@@ -71,15 +73,19 @@
 
   &__connect {
     display: none; // Hide on mobile
+    padding: 1rem;
+    // margin-left: 6rem;
   }
 
   &__social {
     width: 100%;
     text-align: center;
+    padding: 1rem;
 
     &-title {
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
+      color: $white;
     }
 
     &-links {
@@ -114,6 +120,10 @@
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 0.87rem;
     margin-top: 2rem;
+
+    &-text {
+      color: $grey;
+    }
   }
 }
 
@@ -164,6 +174,12 @@
   .footer__connect {
     display: block; // Show on tablet & desktop
     text-align: left;
+    text-decoration: none;
+
+    &-item {
+      color: $white;
+      text-decoration: none;
+    }
   }
 
   .footer__social {
@@ -195,5 +211,10 @@
   .footer__social {
     width: 30%;
     min-height: 220px; // Ensures consistent height across all sections
+  }
+
+  .footer__connect-item {
+    color: $white;
+    text-decoration: none;
   }
 }
