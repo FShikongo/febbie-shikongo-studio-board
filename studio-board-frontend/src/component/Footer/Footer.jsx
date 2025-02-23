@@ -48,13 +48,28 @@ export default function Footer() {
           <h3 className="footer__connect-title">Connect</h3>
           <ul className="footer__connect-list">
             <li className="footer__connect-item">
-              <Link to="/jobboard">Job</Link>
+              <Link
+                to="/jobboard"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Job
+              </Link>
             </li>
             <li className="footer__connect-item">
-              <Link to="/events">Event</Link>
+              <Link
+                to="/events"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Event
+              </Link>
             </li>
             <li className="footer__connect-item">
-              <Link to="/events">Network</Link>
+              <Link
+                to="/events"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Network
+              </Link>
             </li>
           </ul>
         </section>
