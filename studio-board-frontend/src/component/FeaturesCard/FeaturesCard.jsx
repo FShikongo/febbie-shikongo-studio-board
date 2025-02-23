@@ -1,4 +1,4 @@
-import "./FeaturesPage.scss";
+import "./FeaturesCard.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 

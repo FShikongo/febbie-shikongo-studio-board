@@ -1,5 +1,5 @@
 import React from "react";
-import "./EventPartners.scss";
+import "./EventsPartners.scss";
 
 import biaff from "../../assets/Logo/Berlin-International-Art-FF.jpeg";
 import atlantaff from "../../assets/Logo/Atlanta-FF.png";

@@ -37,14 +37,14 @@ export default function Header() {
             </li>
             <li className="header__label">
               <NavLink
-                to="/event"
+                to="/events"
                 className={({ isActive }) =>
                   isActive
                     ? "header__link header__link--active"
                     : "header__link"
                 }
               >
-                Event
+                Events
               </NavLink>
             </li>
             {/* <li className="header__label">
@@ -61,7 +61,7 @@ export default function Header() {
             </li> */}
             <li className="header__label2">
               <NavLink
-                to="/login"
+                to="/dashboard"
                 className={({ isActive }) =>
                   isActive
                     ? "header__link header__link--active"

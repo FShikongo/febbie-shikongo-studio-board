@@ -1,4 +1,6 @@
 import "./Footer.scss";
+import { Link } from "react-router-dom";
+
 import logo from "../../assets/StudioLogo/Studio_Logo2.png";
 
 import facebook from "../../assets/Icons/Icon-facebook.svg";
@@ -45,9 +47,15 @@ export default function Footer() {
         <section className="footer__connect">
           <h3 className="footer__connect-title">Connect</h3>
           <ul className="footer__connect-list">
-            <li className="footer__connect-item">Job</li>
-            <li className="footer__connect-item">Event</li>
-            <li className="footer__connect-item">Network</li>
+            <li className="footer__connect-item">
+              <Link to="/jobboard">Job</Link>
+            </li>
+            <li className="footer__connect-item">
+              <Link to="/events">Event</Link>
+            </li>
+            <li className="footer__connect-item">
+              <Link to="/events">Network</Link>
+            </li>
           </ul>
         </section>
 
