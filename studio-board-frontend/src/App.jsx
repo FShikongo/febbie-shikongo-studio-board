@@ -7,6 +7,7 @@ import JobBoardPage from "./pages/JobBoardPage/JobBoardPage";
 import FeaturesPage from "./pages/FeaturesPage/FeaturesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import CreatePage from "./pages/CreatePage/CreatePage";
 // import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/create" element={<CreatePage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

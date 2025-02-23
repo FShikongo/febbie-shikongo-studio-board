@@ -1,10 +1,10 @@
-import "./HomePage.scss";
-import Main from "../../component/Main/Main";
+import "./CreatePage.scss";
+import CreateOpportunityCard from "../../component/CreateOpportunityCard/CreateOpportunityCard";
 
-export default function HomePage() {
+export default function CreatePage() {
   return (
     <>
-      <Main />
+      <CreateOpportunityCard />
     </>
   );
 }
