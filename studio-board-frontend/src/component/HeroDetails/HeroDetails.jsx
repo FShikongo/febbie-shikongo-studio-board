@@ -5,7 +5,8 @@ import bts from "../../assets/Gif/bts.gif";
 import makeup from "../../assets/Gif/hair-makeup.gif";
 import cannesff from "../../assets/Gif/festival-de-cannes.gif";
 
-const feature = [
+// ✅ Rename "feature" to "heroVideos" to maintain consistency
+const heroVideos = [
   { id: "video1", video: bts },
   { id: "video2", video: makeup },
   { id: "video3", video: cannesff },
@@ -26,7 +27,7 @@ export default function Hero() {
     <section
       className="hero"
       style={{
-        backgroundImage: `url(${heroVideos[currentIndex].video})`,
+        backgroundImage: `url(${heroVideos[currentIndex].video})`, // ✅ Use correct array name
         backgroundSize: "cover",
         backgroundPosition: "center",
         width: "100%",
@@ -36,12 +37,11 @@ export default function Hero() {
     >
       <div className="hero__overlay"></div>
       <div className="hero__content">
-        <h1 className="hero__title">Studio Board</h1>
+        {/* <h1 className="hero__title">Studio Board</h1>
         <p className="hero__subtitle">
           Your one-stop platform for jobs, events, and networking in the
           entertainment industry.
-        </p>
-        {/* <button className="hero__cta-button">Get Started</button> */}
+        </p> */}
       </div>
     </section>
   );

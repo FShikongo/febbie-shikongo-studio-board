@@ -12,9 +12,18 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
 
   useEffect(() => {
     if (jobId) {
-      fetch(`/api/opportunities/${jobId}`)
-        .then((response) => response.json())
-        .then((data) => setJob(data))
+      fetch(`/api/jobs/${jobId}`)
+        .then((response) => {
+          console.log("Raw response:", response); // ✅ Debugging: Log the raw response
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Fetched job details:", data); // ✅ Debugging: Log actual job data
+          setJob(data);
+        })
         .catch((error) => console.error("Error fetching job details:", error));
     }
   }, [jobId]);
@@ -28,12 +37,18 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onApply(formData);
+    if (typeof onApply === "function") {
+      onApply(formData);
+    } else {
+      console.error("onApply is not a function");
+    }
     onClose();
   };
 
+  if (!isOpen) return null;
+
   return (
-    <div className={`apply-modal ${isOpen ? "open" : ""}`}>
+    <div className="apply-modal open">
       <div className="modal-content">
         <button
           type="button"

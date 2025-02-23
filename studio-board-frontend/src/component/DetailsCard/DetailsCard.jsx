@@ -19,7 +19,7 @@ const DetailsCard = () => {
     const getJobBoard = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/opportunities/${jobId}`
+          `http://localhost:5000/api/jobs/${jobId}` // ✅ Corrected API path
         );
         if (!response.ok) {
           throw new Error("Failed to fetch opportunity");
@@ -68,11 +68,18 @@ const DetailsCard = () => {
       </a>
       <button onClick={() => setModalIsOpen(true)}>Apply</button>
 
-      <ApplyModal
-        isOpen={modalIsOpen}
-        opportunity={opportunity}
-        onCancel={() => setModalIsOpen(false)}
-      />
+      {modalIsOpen && (
+        <ApplyModal
+          isOpen={modalIsOpen}
+          jobId={opportunity?.id} // ✅ Ensure jobId is passed
+          onClose={() => setModalIsOpen(false)}
+          onApply={(formData) => {
+            console.log("Application submitted:", formData);
+            alert(`Application submitted for ${opportunity?.title}`);
+            setModalIsOpen(false);
+          }}
+        />
+      )}
     </div>
   );
 };
