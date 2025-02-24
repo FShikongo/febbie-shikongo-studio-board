@@ -2,8 +2,7 @@
 
 ## Overview
 
-Studio Board is a media and production job board app that connects industry professionals with opportunities, including job openings, volunteering, networking events, access to film premieres and festivals.
-It serves as a hub for filmmakers, creatives, and production professionals to find work, collaborate, and grow their networks within the film, media, and entertainment industry.
+Studio Board is a media and production job board app that connects industry professionals with opportunities, including job openings, volunteering, networking events, access to film premieres, and festivals. It serves as a hub for filmmakers, creatives, and production professionals to find work, collaborate, and grow their networks within the film, media, and entertainment industry.
 
 ### Problem Space
 
@@ -11,246 +10,166 @@ The media and production industry can be difficult to break into, with many oppo
 
 ### User Profile
 
-Studio Board will be used by filmmakers, actors, crew members, content creators, media professionals, entertainment agencies, and marketing/advertising firms looking to hire talent or find industry opportunities. Employers, production companies, and event organizers can use the platform to post job openings, volunteer opportunities, and networking events. Special considerations include ensuring an intuitive user experience for both job seekers and recruiters, implementing a filtering system for relevant opportunities, and maintaining a verification process to prevent spam or fake listings. The platform should also support media uploads for portfolios and résumés to showcase user experience.
+Studio Board will be used by filmmakers, actors, crew members, content creators, media professionals, entertainment agencies, and marketing/advertising firms looking to hire talent or find industry opportunities. Employers, production companies, and event organizers can use the platform to post job openings, volunteer opportunities, and networking events.
 
 ### Features
 
-1. User Profiles - Basic profiles where users can add their résumés, portfolios, and contact info.
-2. Job & Opportunity Listings - Users can post and browse job openings, volunteer roles, and industry events.
-3. Search & Filtering - Basic search with filters for job type, location, and industry category.
+1. **User Profiles** - Users can create profiles, upload résumés, portfolios, and contact details.
+2. **Job & Opportunity Listings** - Users can post and browse job openings, volunteer roles, and industry events.
+3. **Search & Filtering** - Users can search and filter listings by job type, location, and category.
+4. **Application System** - Users can apply directly for jobs or events.
+5. **Event Listings** - Film festivals, networking events, and industry meetups.
+6. **Admin Dashboard** - Manages user accounts, job postings, and event moderation.
 
 ## Implementation
 
 ### Tech Stack
 
-Frontend:
+#### **Frontend:**
 
-1. React (Vite)- Fast, modern frontend framework for building the UI.
-2. Sass - Utility-first styling for a clean and responsive design.
-3. React Router - For navigation between pages.
-4. Axios - To handle API requests efficiently.
+1. **React (Vite)** - Fast and modern frontend framework.
+2. **Sass (SCSS)** - Utility-first styling for clean and responsive design.
+3. **React Router** - Handles navigation between pages.
+4. **Axios** - For efficient API requests.
 
-Backend:
+#### **Backend:**
 
-1. Node.js + Express.js - For building a scalable and lightweight backend.
-2. MySQL - MySQL as the relational database, easy database management.
+1. **Node.js + Express.js** - Scalable backend framework.
+2. **JSON** - Relational database for structured data.
+3. **JWT Authentication** - Secure user authentication.
+4. **Nodemailer** - Sends email notifications for job applications and updates.
 
-Hosting & Deployment:
+#### **Hosting & Deployment:**
 
-1. Frontend: Vercel or Netlify (for easy and fast deployment).
-2. Backend: Render or Railway (for hosting the Node.js server).
-3. Database: MySQL hosting for scalability.
-
-Potential Limitations & Considerations:
-
-- Free-tier Hosting Limits - Some hosting platforms have request limits, so scaling may require a paid plan.
-- Authentication Complexity - JWT auth is lightweight, but additional security measures like OAuth (Google Login) may be needed later.
+1. **Frontend:** Netlify or Vercel (for fast deployment).
+2. **Backend:** Render or Railway (for hosting the Node.js server).
+3. **Database:** Hosted MySQL service for scalability.
 
 ### APIs
 
-- Google Maps API - To display job locations and event venues on an interactive map.
+- **Google Maps API** - Displays job locations and event venues on an interactive map.
 
-### Sitemap
+## Sitemap
 
-Home Page
+### **Home Page**
 
 1. Header (Navbar)
 2. Hero banner
-3. Main Section - Overview of the platform with featured job listings and events.
-4. Footer - Logo, social media icons
+3. Featured Job Listings & Events
+4. Call-to-Action (Sign up, Browse Jobs)
+5. Footer
 
-Dashboard Page
+### **Dashboard Page**
 
-1. Header
-2. Hero Banner - feature jobs
-3. Main Section - Job board table
+1. User profile overview
+2. Saved jobs & applications
+3. Recommended jobs & events
 4. Footer
 
-Job/Event Details Page
+### **Job/Event Board**
 
-1. Header
-2. Hero Banner
-3. Main Section - Displays all job listings with filters; includes a modal/component for job details and applications.
+1. Search bar & filters
+2. List of job opportunities & events
+3. Clickable job cards for more details
 4. Footer
 
-Apply Modal
+### **Job/Event Details Page**
 
-1. Header
-2. Hero Banner
-3. Modal - title, message, button (apply, cancel), exit icon
+1. Job/event title, description, requirements
+2. Apply button
+3. Contact information
+4. Related job recommendations
 
-### Mockups
+### **Apply Modal**
 
-#### Home Page
+1. Form for user application submission
+2. Confirmation message
+3. Submit & cancel options
+
+## Mockups
+
+### **Home Page**
 
 ![](/src/asset/Images/Mockup-Home_Page.png)
 
-#### Dashboard Page
+### **Dashboard Page**
 
 ![](/src/asset/Images/Mockup-Dashboard.png)
 
-#### Job Event Details Page
+### **Job Event Details Page**
 
-![](/scr/asset/Images/Mockup-Job_Event_Details.png)
+![](/src/asset/Images/Mockup-Job_Event_Details.png)
 
-#### Apply Modal
+### **Apply Modal**
 
-![](/scr/asset/Images/Mockup-Apply_Modal.png)
+![](/src/asset/Images/Mockup-Apply_Modal.png)
 
-### Data
+## Data Structure
 
-Job Listings
+### **Job Listings**
 
-- id
-- title
-- company_id
-- location
-- job_type (full-time, part-time, contract, freelance, internship, volunteer)
-- description
-- requirements
-- posted_at
-- Relationships:
-  - A job belongs to one employer but can have many applicants.
+- `id`
+- `title`
+- `company_id`
+- `location`
+- `job_type` (full-time, part-time, contract, freelance, internship, volunteer)
+- `description`
+- `requirements`
+- `posted_at`
 
-Users (Applicants & Employers)
+### **Users (Applicants & Employers)**
 
-- id
-- name
-- email (unique)
-- password (hashed)
-- role (applicant, employer, admin)
-- profile_picture (optional)
-- bio (optional)
-- resume_url (applicants)
-- company_name (employers)
-- Relationships:
-  - Users can apply to multiple jobs.
-  - Employers can post multiple job listings.
+- `id`
+- `name`
+- `email` (unique)
+- `password` (hashed)
+- `role` (applicant, employer, admin)
+- `profile_picture` (optional)
+- `bio` (optional)
+- `resume_url` (applicants)
+- `company_name` (employers)
 
-### Endpoints
+## Endpoints
 
-Job Listings
+### **Job Listings**
 
-1. GET /jobs
-
-   - Parameters:
-
-     - type (string, optional)
-     - location (string, optional)
-
-   - Response: 200 OK (success)
-
-   - Example Response:[ { "id": 1, "title": "Film Editor", "company": "Studio A", "location": "Toronto", "description": "Editing various film projects..." } ]
-
-2. POST /jobs
-
-   - Parameters:
-
-     - title (string)
-     - description (string)
-     - location (string)
-     - job_type (string)
-     - company_id
-
-   - Response: 201 Created (success)
-
-   - Example Response: { "message": "Job posted successfully", "job_id": 1 }
-
-3. GET /jobs/:id
-
-   - Parameters:
-
-     - id (int, job id)
-
-   - Response: 200 OK (success)
-   - Example Response: { "id": 1, "title": "Film Editor", "description": "Editing various film projects..." }
-
-4. PUT /jobs/:id
-
-   - Parameters:
-
-     - title (string, optional)
-     - description (string, optional)
-     - location (string, optional)
-
-   - Response: 200 OK (success)
-
-   - Example Response: { "message": "Job updated successfully" }
-
-5. DELETE /jobs/:id
-
-   - Parameters:
-
-     - id (int, job id)
-
-   - Response: 200 OK (success)
-   - Example Response: { "message": "Job deleted successfully" }
+1. **GET /jobs** - Retrieves all job listings.
+2. **POST /jobs** - Creates a new job posting.
+3. **GET /jobs/:id** - Retrieves job details.
+4. **PUT /jobs/:id** - Updates a job listing.
+5. **DELETE /jobs/:id** - Deletes a job listing.
 
 ## Roadmap
 
-Roadmap: 2-Week MVP Sprint Plan
+### **MVP (2-Week Sprint Plan)**
 
-### Setup & Deployment
+#### **Week 1 - Setup & Core Functionality**
 
-- Finalize feature list & tech stack
-- Set up GitHub repository & project structure
-- Create client
-  - Build frontend structure with React & Sass
-  - Initialize React project with routes and boilerplate pages
-- Create server
-  - Set up Express.js project with routing and placeholder 200 responses
-- Create database schema & migrations
-  - Define MySQL database structure
-  - Create tables for users, job listings, applications, and events
-- Seed database
-  - Insert sample job listings, events, and users
-- Initialize MySQL database & define ERD
-- Set up backend (Express.js, Node.js, MySQL)
+- Set up frontend & backend repo
+- Implement database schema
+- Create basic frontend UI
 - Implement job listing CRUD functionality
 - Connect frontend to backend API
-- Implement job search & filtering
-- Style core pages (home, job board, event board)
-- Test backend endpoints with Postman
+- Implement search & filter functionality
 
-### Core Features
+#### **Week 2 - Enhancements & Deployment**
 
-- Feature: List job opportunities & events
-  - Implement job board & event listing pages
-  - Store filters (location, category) in sessionStorage
-  - Create GET /jobs & GET /events endpoints
-- Feature: View job or event details
-  - Implement detailed view page
-  - Create GET /jobs/:id & GET /events/:id endpoints
-
-### Testing & Deployment
-
-- Form validation & error handling
-- Implement authentication on frontend (JWT)
-- Optimize database queries & API performance
-- Refine UI/UX for better user experience
-
-- User testing for functionality & responsiveness
-- Debug & fix critical issues
-- Final refinements & polish UI
-
-- Deploy backend (Heroku)
-- Deploy frontend (Netlify)
-- Final testing & bug fixes
-- Prepare capstone presentation materials
-- Submit project
-- DEMO DAY 🚀
-
----
+- Implement user authentication
+- Optimize UI/UX for better user experience
+- Add form validation & error handling
+- Deploy frontend & backend
+- Final bug fixes & testing
 
 ## Future Implementations
 
-### Nice-to-haves
+1. **User Profiles** - Manage personal details, portfolios, and résumés.
+2. **Events Page** - List networking events, film festivals, and industry meetups.
+3. **Dashboard Page** - Personalized space with saved jobs, applications, and recommendations.
+4. **Admin Page** - Moderation tools for jobs and users.
+5. **OAuth Authentication** - Support for Google/LinkedIn login.
+6. **Payment Integration** - Premium job postings for employers.
+7. **AI Matching System** - Suggests relevant job postings based on user profile.
 
-1. Events Page - Lists networking events, film festivals, and industry meetups. Implement event listing CRUD functionality
-2. Post a Job Page - Employers submit job listings (can be a form modal on the Jobs Page).
-3. Dashboard Page - User's personalized space with saved jobs, applications, and recommendations.
-4. Profile Page - Users manage personal details, résumés, and portfolios.
-5. Admin Page - Manages users, job listings, and reported content.
-6. Nodemailer - For sending email notifications to users about job applications and updates.
-7. Storage - For hosting user-uploaded images, résumés, and portfolio media.
-8. Authentication (JWT - JSON Web Tokens) - Implement user authentication (signup/login) For social login options like Google or LinkedIn authentication in future versions.
+---
+
+### 🚀 **Capstone Goal:** Build a functional prototype of Studio Board to streamline networking and job hunting in the media industry!
