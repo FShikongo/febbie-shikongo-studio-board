@@ -2,115 +2,127 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-$studio-black: #13182c;
-$studio-blue: #22a4e4;
-$white: #ffffff;
-
-$slate: #5c667e;
-$cloud: #bdc5d5;
-
-$graphite: #232940;
-$light-grey: #f7f8f9;
-
-.dashboard-card {
-  background: $white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: auto;
+.dashboard-profile {
+  max-width: 700px;
+  margin: 3rem 10rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-}
 
-.dashboard-card__about {
-  text-align: center;
-  padding-bottom: 20px;
-}
+  &__info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 
-.dashboard-card__logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
 
-.dashboard-card__name {
-  color: $studio-black;
-  font-size: 22px;
-  margin-bottom: 5px;
-}
+  &__logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
 
-.dashboard-card__description {
-  color: $slate;
-  font-size: 16px;
-}
+  &__name {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #13182c;
+  }
 
-.dashboard-card__details {
-  background: $light-grey;
-  padding: 15px;
-  border-radius: 8px;
-  margin: 20px 0;
-}
+  &__description {
+    font-size: 1rem;
+    color: #5c667e;
+    max-width: 100%;
+  }
 
-.dashboard-card__details h3 {
-  color: $studio-blue;
-  margin-bottom: 10px;
-}
+  &__website {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    color: #22a4e4;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
-.dashboard-card__details p {
-  color: $studio-black;
-  font-size: 14px;
-  margin: 5px 0;
-}
+  &__about {
+    width: 100%;
+    text-align: left;
+    margin-top: 1.5rem;
 
-.dashboard-card__details a {
-  color: $studio-blue;
-  text-decoration: none;
-}
+    h3 {
+      font-size: 1.5rem;
+      color: #13182c;
+      margin-bottom: 0.5rem;
+    }
 
-.dashboard-card__opportunities {
-  padding: 15px 0;
-}
+    p {
+      font-size: 1rem;
+      color: #5c667e;
+      margin-bottom: 0.5rem;
+    }
 
-.dashboard-card__opportunities h3 {
-  color: $studio-blue;
-  margin-bottom: 10px;
-}
+    a {
+      color: #22a4e4;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
-.dashboard-card__opportunities ul {
-  list-style: none;
-  padding: 0;
-}
+  &__opportunities {
+    width: 100%;
+    text-align: left;
+    margin-top: 1.5rem;
 
-.dashboard-card__opportunities li {
-  margin: 5px 0;
-}
+    h3 {
+      font-size: 1.5rem;
+      color: #13182c;
+      margin-bottom: 0.5rem;
+    }
 
-.dashboard-card__opportunities a {
-  color: $studio-black;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-.dashboard-card__opportunities a:hover {
-  color: $studio-blue;
-}
+    li {
+      font-size: 1rem;
+      color: #22a4e4;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
-.dashboard-card__create-button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 18px;
-  background: $studio-blue;
-  color: $white;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.dashboard-card__create-button:hover {
-  background: darken($studio-blue, 10%);
+  &__create-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: #22a4e4;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      background: darken(#22a4e4, 10%);
+    }
+  }
 }

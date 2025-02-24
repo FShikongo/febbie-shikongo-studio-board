@@ -1,9 +1,6 @@
 import React from "react";
 import "./DashboardCard.scss";
-
 import logo2 from "../../assets/StudioLogo/Studio_Logo2.png";
-
-const logos = [logo2];
 
 const DashboardCard = ({ company }) => {
   if (!company) {
@@ -11,27 +8,40 @@ const DashboardCard = ({ company }) => {
   }
 
   return (
-    <div className="dashboard-card">
-      {/* About Section */}
-      <section className="dashboard-card__about">
+    <div className="dashboard-profile">
+      {/* Header Section */}
+      <header className="dashboard-profile__header">
         <img
-          src={logo2} // Default logo fallback
+          src={logo2}
           alt={`${company.name || "Company"} Logo`}
-          className="dashboard-card__logo"
+          className="dashboard-profile__logo"
         />
-        <h2 className="dashboard-card__name">
-          {company.name || "Company Name"}
-        </h2>
-        <p className="dashboard-card__description">
-          {company.description || "No company description available."}
-        </p>
-      </section>
+        <div className="dashboard-profile__info">
+          <h2 className="dashboard-profile__name">
+            {company.name || "Company Name"}
+          </h2>
+          <p className="dashboard-profile__description">
+            {company.description || "No company description available."}
+          </p>
+          <a
+            href={company.website || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="dashboard-profile__website"
+          >
+            {company.website || "N/A"}
+          </a>
+        </div>
+      </header>
 
-      {/* Organization Details */}
-      <section className="dashboard-card__details">
-        <h3>Organization Details</h3>
+      {/* About Section */}
+      <section className="dashboard-profile__about">
+        <h3>About</h3>
         <p>
           <strong>Employees:</strong> {company.employees || "N/A"}
+        </p>
+        <p>
+          <strong>Head Office:</strong> {company.headOffice || "N/A"}
         </p>
         <p>
           <strong>Office Locations:</strong>{" "}
@@ -42,19 +52,6 @@ const DashboardCard = ({ company }) => {
           <a href={`mailto:${company.email}`}>{company.email || "N/A"}</a>
         </p>
         <p>
-          <strong>Website:</strong>{" "}
-          <a
-            href={company.website || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {company.website || "N/A"}
-          </a>
-        </p>
-        <p>
-          <strong>Head Office:</strong> {company.headOffice || "N/A"}
-        </p>
-        <p>
           <strong>Social Media:</strong>{" "}
           {company.socials && company.socials.length > 0
             ? company.socials.map((social, index) => (
@@ -63,6 +60,7 @@ const DashboardCard = ({ company }) => {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="dashboard-profile__social"
                 >
                   {social.platform}
                 </a>
@@ -72,12 +70,15 @@ const DashboardCard = ({ company }) => {
       </section>
 
       {/* Active Opportunities */}
-      <section className="dashboard-card__opportunities">
+      <section className="dashboard-profile__opportunities">
         <h3>Active Opportunities</h3>
         {company.opportunities && company.opportunities.length > 0 ? (
           <ul>
             {company.opportunities.map((opportunity) => (
-              <li key={opportunity.id}>
+              <li
+                key={opportunity.id}
+                className="dashboard-profile__opportunity"
+              >
                 <a
                   href="#"
                   onClick={() => company.onViewOpportunity(opportunity.id)}
@@ -90,7 +91,7 @@ const DashboardCard = ({ company }) => {
         ) : (
           <p>No active opportunities available.</p>
         )}
-        <a href="/create" className="dashboard-card__create-button">
+        <a href="/create" className="dashboard-profile__create-button">
           Create New Opportunity
         </a>
       </section>

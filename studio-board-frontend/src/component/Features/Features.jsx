@@ -117,7 +117,7 @@ const Features = () => {
                 style={{ backgroundImage: `url(${feature.image})` }}
               ></div>
               <div className="features__text">
-                <h3 className="features__title">{feature.title}</h3>
+                <h3 className="features__subtitle">{feature.title}</h3>
                 <p className="features__description">{feature.description}</p>
               </div>
             </div>

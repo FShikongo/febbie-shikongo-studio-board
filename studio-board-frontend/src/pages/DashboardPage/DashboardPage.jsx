@@ -1,5 +1,6 @@
 import "./DashboardPage.scss";
 import DashboardCard from "../../component/DashboardCard/DashboardCard";
+import HeroEvents from "../../component/HeroEvents/HeroEvents";
 
 const companyData = {
   logo: "/path-to-logo.png", // Ensure this image exists in the public folder
@@ -25,6 +26,7 @@ export default function DashboardPage() {
   return (
     <>
       <DashboardCard company={companyData} />
+      <HeroEvents />
     </>
   );
 }
