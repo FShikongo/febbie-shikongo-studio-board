@@ -1,0 +1,85 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+$studio-black: #13182c;
+$studio-blue: #22a4e4;
+$white: #ffffff;
+
+$slate: #5c667e;
+$cloud: #bdc5d5;
+
+$graphite: #232940;
+$light-grey: #f7f8f9;
+
+.features-page {
+  font-family: Arial, sans-serif;
+  color: $studio-black;
+  background-color: $light-grey;
+  text-align: center;
+}
+
+.features-header {
+  background-color: $studio-blue;
+  color: $white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hero-section {
+  padding: 40px 20px;
+  background-color: $cloud;
+}
+
+.hero-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.feature-slide {
+  min-width: 250px;
+  margin: 0 15px;
+  padding: 15px;
+  background: $white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.feature-category {
+  background: $white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-category h2 {
+  color: $studio-blue;
+  margin-bottom: 10px;
+}
+
+.feature-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-category li {
+  padding: 10px;
+  border-bottom: 1px solid $cloud;
+}
+
+.features-footer {
+  background-color: $studio-black;
+  color: $white;
+  padding: 20px;
+  margin-top: 20px;
+}

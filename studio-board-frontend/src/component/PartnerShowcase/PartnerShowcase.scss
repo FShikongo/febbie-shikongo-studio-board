@@ -1,0 +1,73 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.partner-showcase {
+  height: 80vh;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+  text-align: center;
+  overflow: hidden;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-top: 6rem;
+  }
+
+  &__text {
+    max-width: 52rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: $studio-black;
+  }
+
+  &__logos-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    padding-top: 3rem;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    animation: scroll 20s linear infinite;
+  }
+
+  &__logo {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 768px) {
+  .partner-showcase__logo {
+    width: 160px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .partner-showcase {
+    padding: 4rem 4rem;
+  }
+
+  .partner-showcase__logo {
+    width: 180px;
+  }
+}

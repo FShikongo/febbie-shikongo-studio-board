@@ -1,0 +1,26 @@
+@use "./variables" as *;
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../assets/Font/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../assets/Font/OpenSans-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../assets/Font/OpenSans-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: light;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}

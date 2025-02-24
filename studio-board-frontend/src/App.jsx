@@ -1,19 +1,31 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 
+import LandingPage from "./pages/LandingPage/LandingPage";
 import HomePage from "./pages/HomePage/HomePage";
-import DashBoardPage from "./pages/DashBoardPage/DashBoardPage";
-import DetailsPage from "./pages/DetailsPage/DetailsPage";
+import JobBoardPage from "./pages/JobBoardPage/JobBoardPage";
+import FeaturesPage from "./pages/FeaturesPage/FeaturesPage";
+import EventsPage from "./pages/EventsPage/EventsPage";
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import CreatePage from "./pages/CreatePage/CreatePage";
+import Header from "./component/Header/Header";
+import Footer from "./component/Footer/Footer";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/dashboard" element={<DashBoardPage />} />
-          <Route path="/dashboard/:id" element={<DetailsPage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/jobboard" element={<JobBoardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/create" element={<CreatePage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

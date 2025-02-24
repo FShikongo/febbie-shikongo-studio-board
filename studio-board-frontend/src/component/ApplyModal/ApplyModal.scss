@@ -1,0 +1,69 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.details-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: $white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: $studio-black;
+
+  .page-header__icon-arrow-back {
+    width: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .details-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $studio-blue;
+  }
+
+  .details-organization,
+  .details-location,
+  .details-posted,
+  .details-category,
+  .details-type,
+  .details-description,
+  .details-org-description,
+  .details-contact {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: $slate;
+  }
+
+  .details-website {
+    display: inline-block;
+    margin-top: 10px;
+    color: $studio-blue;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: $studio-blue;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: $graphite;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.details-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.details-modal {
+  background: $white;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  max-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.details-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $studio-blue;
+  margin-bottom: 0.5rem;
+}
+
+.details-organization {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $studio-black;
+  margin-bottom: 1rem;
+}
+
+.details-org-description,
+.details-description {
+  font-size: 1rem;
+  color: $slate;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.details-location,
+.details-posted,
+.details-category,
+.details-type,
+.details-contact {
+  font-size: 1rem;
+  color: $graphite;
+  margin-bottom: 0.75rem;
+}
+
+.details-website {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $studio-blue;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+    color: darken($studio-blue, 10%);
+  }
+}
+
+.details-modal button {
+  width: 40%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: $studio-blue;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+
+  &:hover {
+    background-color: darken($studio-blue, 10%);
+  }
+}
+
+.details-website {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .details-modal {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .details-title {
+    font-size: 1.6rem;
+  }
+
+  .details-organization {
+    font-size: 1.1rem;
+  }
+
+  .details-org-description,
+  .details-description {
+    font-size: 0.95rem;
+  }
+
+  .details-modal button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
