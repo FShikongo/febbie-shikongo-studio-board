@@ -2,9 +2,9 @@ import React from "react";
 import "./HeroEvents.scss";
 
 import event1 from "../../assets/Gif/SAGAwards.gif";
-import event2 from "../../assets/Gif/SAGAwards.gif";
-import event3 from "../../assets/Gif/SAGAwards.gif";
-import event4 from "../../assets/Gif/SAGAwards.gif";
+import event2 from "../../assets/Gif/E!.gif";
+import event3 from "../../assets/Gif/Shake-if.gif";
+import event4 from "../../assets/Gif/Drums.gif";
 
 const HeroEvents = () => {
   const events = [

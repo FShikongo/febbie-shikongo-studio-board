@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../ApplyModal/ApplyModal.scss"; // ✅ Fixed import
+import "../ApplyModal/ApplyModal.scss";
 import CloseIcon from "../../assets/icons/close-24px.svg";
 
 const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
@@ -14,14 +14,14 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
     if (jobId) {
       fetch(`/api/jobs/${jobId}`)
         .then((response) => {
-          console.log("Raw response:", response); // ✅ Debugging: Log the raw response
+          console.log("Raw response:", response);
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }
           return response.json();
         })
         .then((data) => {
-          console.log("Fetched job details:", data); // ✅ Debugging: Log actual job data
+          console.log("Fetched job details:", data);
           setJob(data);
         })
         .catch((error) => console.error("Error fetching job details:", error));
@@ -105,5 +105,4 @@ const ApplyModal = ({ isOpen, onClose, onApply, jobId }) => {
   );
 };
 
-// ✅ Ensure there is ONLY ONE default export
 export default ApplyModal;

@@ -2,16 +2,6 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-$studio-black: #13182c;
-$studio-blue: #22a4e4;
-$white: #ffffff;
-
-$slate: #5c667e;
-$cloud: #bdc5d5;
-
-$graphite: #232940;
-$light-grey: #f7f8f9;
-
 .hero-features {
   text-align: center;
   background-color: $light-grey;

@@ -8,7 +8,6 @@ import FeaturesPage from "./pages/FeaturesPage/FeaturesPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import CreatePage from "./pages/CreatePage/CreatePage";
-// import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
 

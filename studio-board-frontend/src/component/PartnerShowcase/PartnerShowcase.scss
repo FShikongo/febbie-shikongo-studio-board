@@ -7,7 +7,7 @@
   padding: 4rem 2rem;
   margin-top: 4rem;
   text-align: center;
-  overflow: hidden; // Prevents overflow issues
+  overflow: hidden;
 
   &__title {
     font-size: 2rem;
@@ -29,7 +29,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    white-space: nowrap; // Prevents wrapping
+    white-space: nowrap;
     padding-top: 3rem;
   }
 
@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    animation: scroll 20s linear infinite; // Continuous scrolling
+    animation: scroll 20s linear infinite;
   }
 
   &__logo {
@@ -47,7 +47,6 @@
   }
 }
 
-// Keyframes for infinite scrolling effect
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -57,7 +56,6 @@
   }
 }
 
-// Responsive Adjustments
 @media (min-width: 768px) {
   .partner-showcase__logo {
     width: 160px;
@@ -73,45 +71,3 @@
     width: 180px;
   }
 }
-
-// @use "../../styles/partials/mixins" as *;
-// @use "../../styles/partials/typography" as *;
-// @use "../../styles/partials/variables" as *;
-
-// .partner-showcase {
-//   height: 90vh;
-//   padding: 4rem 4rem;
-//   margin-top: 4rem;
-//   text-align: center;
-// }
-
-// .partner-showcase__title {
-//   display: flex;
-//   font-size: 2rem;
-//   margin-bottom: 20px;
-//   justify-content: center;
-// }
-
-// .partner-showcase__text {
-//   max-width: 52rem;
-//   margin: 0 auto; // Centers the text block
-//   text-align: center;
-//   justify-content: center;
-//   padding-bottom: 2rem;
-//   font-size: 1.2rem;
-//   line-height: 1.6;
-//   color: #444;
-// }
-
-// .partner-showcase__logos {
-//   display: flex;
-//   overflow-x: auto;
-//   gap: 40px;
-//   padding: 20px 0;
-// }
-
-// .partner-showcase__logo {
-//   width: 150px;
-//   height: auto;
-//   flex-shrink: 0;
-// }

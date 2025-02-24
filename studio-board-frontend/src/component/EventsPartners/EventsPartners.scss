@@ -6,7 +6,7 @@
   padding: 4rem 2rem;
   margin-top: 4rem;
   text-align: center;
-  overflow: hidden; // Prevents overflow issues
+  overflow: hidden;
 
   &__title {
     font-size: 2rem;
@@ -27,14 +27,14 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    white-space: nowrap; // Prevents wrapping
+    white-space: nowrap;
   }
 
   &__logos {
     display: flex;
     align-items: center;
     gap: 40px;
-    animation: scroll 20s linear infinite; // Continuous scrolling
+    animation: scroll 20s linear infinite;
   }
 
   &__logo {
@@ -44,7 +44,6 @@
   }
 }
 
-// Keyframes for infinite scrolling effect
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -54,7 +53,6 @@
   }
 }
 
-// Responsive Adjustments
 @media (min-width: 768px) {
   .partner-showcase__logo {
     width: 160px;

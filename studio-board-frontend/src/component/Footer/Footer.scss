@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem; // Adds space between sections in mobile
+    gap: 2rem;
   }
 
   &__subscribe {
@@ -72,10 +72,9 @@
   }
 
   &__connect {
-    display: none; // Hide on mobile
+    display: none;
     padding: 1rem;
     text-decoration: none;
-    // margin-left: 6rem;
   }
 
   &__social {
@@ -148,10 +147,10 @@
   .footer__connect,
   .footer__social {
     width: 30%;
-    min-height: 200px; // Ensures all sections have the same height
+    min-height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; // Aligns text at the top
+    justify-content: flex-start;
   }
 
   .footer__subscribe {
@@ -173,7 +172,7 @@
   }
 
   .footer__connect {
-    display: block; // Show on tablet & desktop
+    display: block;
     text-align: left;
     text-decoration: none;
     margin-left: 9rem;
@@ -221,6 +220,6 @@
   .footer__connect,
   .footer__social {
     width: 30%;
-    min-height: 220px; // Ensures consistent height across all sections
+    min-height: 220px;
   }
 }

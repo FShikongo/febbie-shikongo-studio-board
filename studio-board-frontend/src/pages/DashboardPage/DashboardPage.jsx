@@ -3,7 +3,7 @@ import DashboardCard from "../../component/DashboardCard/DashboardCard";
 import HeroEvents from "../../component/HeroEvents/HeroEvents";
 
 const companyData = {
-  logo: "/path-to-logo.png", // Ensure this image exists in the public folder
+  logo: "/path-to-logo.png",
   name: "Studio Board",
   description: "A platform for entertainment professionals.",
   employees: 50,

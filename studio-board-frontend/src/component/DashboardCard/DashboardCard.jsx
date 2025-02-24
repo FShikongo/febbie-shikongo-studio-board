@@ -9,7 +9,6 @@ const DashboardCard = ({ company }) => {
 
   return (
     <div className="dashboard-profile">
-      {/* Header Section */}
       <header className="dashboard-profile__header">
         <img
           src={logo2}
@@ -34,7 +33,6 @@ const DashboardCard = ({ company }) => {
         </div>
       </header>
 
-      {/* About Section */}
       <section className="dashboard-profile__about">
         <h3>About</h3>
         <p>
@@ -69,7 +67,6 @@ const DashboardCard = ({ company }) => {
         </p>
       </section>
 
-      {/* Active Opportunities */}
       <section className="dashboard-profile__opportunities">
         <h3>Active Opportunities</h3>
         {company.opportunities && company.opportunities.length > 0 ? (

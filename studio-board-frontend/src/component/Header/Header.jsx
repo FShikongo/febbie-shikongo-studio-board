@@ -47,18 +47,7 @@ export default function Header() {
                 Events
               </NavLink>
             </li>
-            {/* <li className="header__label">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "header__link header__link--active"
-                    : "header__link"
-                }
-              >
-                Contact
-              </NavLink>
-            </li> */}
+
             <li className="header__label2">
               <NavLink
                 to="/dashboard"

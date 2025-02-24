@@ -14,8 +14,6 @@ export default function JobEventList() {
   const [favorites, setFavorites] = useState({});
   const [detailsModalOpen, setDetailsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
-  const [applicationConfirmed, setApplicationConfirmed] = useState(false);
-  const [sortOrder, setSortOrder] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,6 +30,10 @@ export default function JobEventList() {
     }
   };
 
+  const addNewJob = (newJob) => {
+    setJobData((prevJobs) => [newJob, ...prevJobs]);
+  };
+
   const toggleFavorite = (id) => {
     setFavorites((prev) => ({ ...prev, [id]: !prev[id] }));
   };
@@ -39,16 +41,11 @@ export default function JobEventList() {
   const openDetailsModal = (job) => {
     setSelectedJob(job);
     setDetailsModalOpen(true);
-    setApplicationConfirmed(false);
   };
 
   const closeDetailsModal = () => {
     setSelectedJob(null);
     setDetailsModalOpen(false);
-  };
-
-  const confirmApplication = () => {
-    setApplicationConfirmed(true);
   };
 
   return (
@@ -82,45 +79,49 @@ export default function JobEventList() {
       </div>
 
       <div className="job-event-list__list">
-        {jobData
-          .filter(
-            (job) =>
-              job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-              job.organization_name
-                .toLowerCase()
-                .includes(searchTerm.toLowerCase())
-          )
-          .map((job) => (
-            <div key={job.id} className="job-event-list__row">
-              <span
-                className="job-event-list__title"
-                onClick={() => openDetailsModal(job)}
-              >
-                {job.title}
-              </span>
-              <span>{job.location}</span>
-              <span>{job.organization_name}</span>
-              <span>{job.type}</span>
-              <span className="job-event-list__actions">
-                <button
-                  className="apply-button"
+        {jobData.length === 0 ? (
+          <p className="job-event-list__no-jobs">No opportunities available.</p>
+        ) : (
+          jobData
+            .filter(
+              (job) =>
+                job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                job.organization_name
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase())
+            )
+            .map((job) => (
+              <div key={job.id} className="job-event-list__row">
+                <span
+                  className="job-event-list__title"
                   onClick={() => openDetailsModal(job)}
                 >
-                  View Details
-                </button>
-                <span
-                  onClick={() => toggleFavorite(job.id)}
-                  className="favorite-icon"
-                >
-                  {favorites[job.id] ? (
-                    <FaHeart className="favorite-icon__active" />
-                  ) : (
-                    <FaRegHeart />
-                  )}
+                  {job.title}
                 </span>
-              </span>
-            </div>
-          ))}
+                <span>{job.location}</span>
+                <span>{job.organization_name}</span>
+                <span>{job.type}</span>
+                <span className="job-event-list__actions">
+                  <button
+                    className="apply-button"
+                    onClick={() => openDetailsModal(job)}
+                  >
+                    View Details
+                  </button>
+                  <span
+                    onClick={() => toggleFavorite(job.id)}
+                    className="favorite-icon"
+                  >
+                    {favorites[job.id] ? (
+                      <FaHeart className="favorite-icon__active" />
+                    ) : (
+                      <FaRegHeart />
+                    )}
+                  </span>
+                </span>
+              </div>
+            ))
+        )}
       </div>
 
       {detailsModalOpen && (
@@ -128,8 +129,6 @@ export default function JobEventList() {
           isOpen={detailsModalOpen}
           job={selectedJob}
           onClose={closeDetailsModal}
-          onApply={confirmApplication}
-          applicationConfirmed={applicationConfirmed}
         />
       )}
     </div>

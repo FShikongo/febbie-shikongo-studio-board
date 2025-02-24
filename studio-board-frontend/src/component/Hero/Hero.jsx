@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./Hero.scss";
 
-import garfield from "../../assets/Gif/Andrew-Garfield.gif";
 import dancing from "../../assets/Gif/Dancing.gif";
 import damme from "../../assets/Gif/JCVDamme.gif";
 import dandbridge from "../../assets/Gif/Dorothy-Dandridge-Vintage.gif";
 import travolta from "../../assets/Gif/Cigarette-Travolta.gif";
 import dancing2 from "../../assets/Gif/Dancing2.gif";
 import maestro from "../../assets/Gif/Maestro.gif";
+import smiling from "../../assets/Gif/Smiling.gif";
 
 const heroVideos = [
-  { id: "video1", video: garfield },
+  { id: "video1", video: smiling },
   { id: "video2", video: dancing },
   { id: "video3", video: damme },
   { id: "video4", video: dandbridge },
@@ -25,7 +25,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroVideos.length);
-    }, 5000); // Change background every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);

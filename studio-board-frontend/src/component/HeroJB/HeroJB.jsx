@@ -17,7 +17,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroVideos.length);
-    }, 5000); // Change background every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -41,7 +41,6 @@ export default function Hero() {
           Your one-stop platform for jobs, events, and networking in the
           entertainment industry.
         </p>
-        {/* <button className="hero__cta-button">Get Started</button> */}
       </div>
     </section>
   );

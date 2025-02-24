@@ -2,70 +2,160 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-$studio-black: #13182c;
-$studio-blue: #22a4e4;
-$white: #ffffff;
-
-$slate: #5c667e;
-$cloud: #bdc5d5;
-
-$graphite: #232940;
-$light-grey: #f7f8f9;
-
 .create-opportunity-card {
+  font-family: "Open Sans";
   background: $white;
   border-radius: 8px;
-  padding: 20px;
+  padding: 1rem 2rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
+  max-width: 100%;
+  width: 90%;
+  margin: 2rem auto;
+  text-align: left;
 }
 
 .create-opportunity-card h2 {
-  color: $studio-blue;
-  margin-bottom: 15px;
+  color: $studio-black;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.create-opportunity-card h3 {
+  color: $studio-black;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.create-opportunity-card .section-instructions {
+  font-size: 14px;
+  color: $slate;
+  margin-bottom: 1rem;
 }
 
 .create-opportunity-card form {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .create-opportunity-card label {
-  text-align: left;
+  font-family: "Open Sans";
   font-weight: bold;
   color: $studio-black;
   margin-bottom: 5px;
+  align-self: flex-start;
+  display: block;
 }
 
 .create-opportunity-card input,
-.create-opportunity-card textarea {
+.create-opportunity-card textarea,
+.create-opportunity-card select {
+  font-family: "Open Sans";
   width: 100%;
+  min-width: 250px;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid $cloud;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
+  display: block;
 }
 
 .create-opportunity-card textarea {
+  font-family: "Open Sans";
   height: 100px;
   resize: vertical;
+  color: $studio-black;
 }
 
 .create-opportunity-card button {
   background: $studio-blue;
   color: $white;
-  padding: 12px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: 100%;
+  max-width: 250px;
 }
 
 .create-opportunity-card button:hover {
   background: darken($studio-blue, 10%);
+}
+
+// Dropdown Styling
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.dropdown-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.form-dropdown {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $cloud;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: $white;
+  appearance: none;
+  position: relative;
+}
+
+// Responsive Design
+@media (min-width: 768px) {
+  .create-opportunity-card {
+    max-width: 800px;
+    padding: 1.5rem 4rem;
+  }
+
+  .create-opportunity-card input,
+  .create-opportunity-card textarea,
+  .create-opportunity-card select {
+    max-width: 90%;
+    min-width: 500px;
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .create-opportunity-card button {
+    max-width: 60%;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .create-opportunity-card {
+    max-width: 900px;
+    padding: 2rem 5rem;
+  }
+
+  .create-opportunity-card input,
+  .create-opportunity-card textarea,
+  .create-opportunity-card select {
+    max-width: 80%;
+    min-width: 640px;
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  .create-opportunity-card button {
+    max-width: 50%;
+    font-size: 18px;
+  }
 }
