@@ -1,4 +1,4 @@
-# Studio Board
+# BrainStation Capstone Project: Studio Board! 🎬
 
 ## Overview
 
@@ -14,12 +14,10 @@ Studio Board will be used by filmmakers, actors, crew members, content creators,
 
 ### Features
 
-1. **User Profiles** - Users can create profiles, upload résumés, portfolios, and contact details.
-2. **Job & Opportunity Listings** - Users can post and browse job openings, volunteer roles, and industry events.
-3. **Search & Filtering** - Users can search and filter listings by job type, location, and category.
-4. **Application System** - Users can apply directly for jobs or events.
-5. **Event Listings** - Film festivals, networking events, and industry meetups.
-6. **Admin Dashboard** - Manages user accounts, job postings, and event moderation.
+1. **Job & Opportunity Listings** - Users can post and browse job openings, volunteer roles, and industry events.
+2. **Search & Filtering** - Users can search and filter listings by job type, location, and category.
+3. **Event Listings** - Film festivals, networking events, and industry meetups.
+
 
 ## Implementation
 
@@ -36,18 +34,10 @@ Studio Board will be used by filmmakers, actors, crew members, content creators,
 
 1. **Node.js + Express.js** - Scalable backend framework.
 2. **JSON** - Relational database for structured data.
-3. **JWT Authentication** - Secure user authentication.
-4. **Nodemailer** - Sends email notifications for job applications and updates.
 
-#### **Hosting & Deployment:**
+#### **Additional:**
 
-1. **Frontend:** Netlify or Vercel (for fast deployment).
-2. **Backend:** Render or Railway (for hosting the Node.js server).
-3. **Database:** Hosted MySQL service for scalability.
-
-### APIs
-
-- **Google Maps API** - Displays job locations and event venues on an interactive map.
+Additional tools such as Vite for development efficiency and Sass (SCSS) for styling.
 
 ## Sitemap
 
@@ -56,14 +46,15 @@ Studio Board will be used by filmmakers, actors, crew members, content creators,
 1. Header (Navbar)
 2. Hero banner
 3. Featured Job Listings & Events
-4. Call-to-Action (Sign up, Browse Jobs)
-5. Footer
+4. Partnership Showcase
+5. Call-to-Action (Sign up, Browse Jobs)
+6. Footer
+   
+### **Event Page**
 
-### **Dashboard Page**
-
-1. User profile overview
-2. Saved jobs & applications
-3. Recommended jobs & events
+1. Header (Navbar)
+2. Featured Events
+3. Partnership Showcase
 4. Footer
 
 ### **Job/Event Board**
@@ -73,36 +64,13 @@ Studio Board will be used by filmmakers, actors, crew members, content creators,
 3. Clickable job cards for more details
 4. Footer
 
-### **Job/Event Details Page**
+### **Details Modal**
 
 1. Job/event title, description, requirements
 2. Apply button
 3. Contact information
-4. Related job recommendations
 
-### **Apply Modal**
-
-1. Form for user application submission
-2. Confirmation message
-3. Submit & cancel options
-
-## Mockups
-
-### **Home Page**
-
-![](/src/asset/Images/Mockup-Home_Page.png)
-
-### **Dashboard Page**
-
-![](/src/asset/Images/Mockup-Dashboard.png)
-
-### **Job Event Details Page**
-
-![](/src/asset/Images/Mockup-Job_Event_Details.png)
-
-### **Apply Modal**
-
-![](/src/asset/Images/Mockup-Apply_Modal.png)
+   
 
 ## Data Structure
 
@@ -116,18 +84,6 @@ Studio Board will be used by filmmakers, actors, crew members, content creators,
 - `description`
 - `requirements`
 - `posted_at`
-
-### **Users (Applicants & Employers)**
-
-- `id`
-- `name`
-- `email` (unique)
-- `password` (hashed)
-- `role` (applicant, employer, admin)
-- `profile_picture` (optional)
-- `bio` (optional)
-- `resume_url` (applicants)
-- `company_name` (employers)
 
 ## Endpoints
 
@@ -152,23 +108,18 @@ Studio Board will be used by filmmakers, actors, crew members, content creators,
 - Connect frontend to backend API
 - Implement search & filter functionality
 
-#### **Week 2 - Enhancements & Deployment**
+#### **Week 2 - Enhancements**
 
-- Implement user authentication
 - Optimize UI/UX for better user experience
 - Add form validation & error handling
-- Deploy frontend & backend
 - Final bug fixes & testing
 
 ## Future Implementations
 
 1. **User Profiles** - Manage personal details, portfolios, and résumés.
-2. **Events Page** - List networking events, film festivals, and industry meetups.
-3. **Dashboard Page** - Personalized space with saved jobs, applications, and recommendations.
-4. **Admin Page** - Moderation tools for jobs and users.
-5. **OAuth Authentication** - Support for Google/LinkedIn login.
-6. **Payment Integration** - Premium job postings for employers.
-7. **AI Matching System** - Suggests relevant job postings based on user profile.
+2. **Dashboard Page** - Personalized space with saved jobs, applications, and recommendations.
+3. **OAuth Authentication** - Support for Google/LinkedIn login. 
+4. **AI Matching System** - Suggests relevant job postings based on user profile.
 
 ---
 
