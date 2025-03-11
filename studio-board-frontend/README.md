@@ -23,7 +23,7 @@ Studio Board will be used by filmmakers, actors, crew members, content creators,
 
 ## Implementation
 
-### Tech 
+### Tech Stack
 
 #### **Frontend:**
 
