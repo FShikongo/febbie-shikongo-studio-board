@@ -6,7 +6,7 @@
 
 Studio Board is a media and production job board app that connects industry professionals with opportunities, including job openings, volunteering, networking events, access to film premieres, and festivals. It serves as a hub for filmmakers, creatives, and production professionals to find work, collaborate, and grow their networks within the film, media, and entertainment industry.
 
-### Problem 
+### Problem Space
 
 The media and production industry can be difficult to break into, with many opportunities shared through word-of-mouth or closed networks. Emerging filmmakers, creatives, and production professionals often struggle to find reliable job postings, industry events, and networking opportunities in one central place. Studio Board addresses this gap by providing a dedicated platform where users can easily discover and apply for opportunities, helping them build connections and gain experience in the industry.
 
