@@ -1,4 +1,4 @@
-# BrainStation Capstone Project: Studio Board! 🎬 bjmbj
+# BrainStation Capstone Project: Studio Board! 🎬 
 
 ### Backend: https://github.com/FShikongo/febbie-shikongo-studio-board-backend.git
 
